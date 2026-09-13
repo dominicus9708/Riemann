@@ -1,4 +1,4 @@
-prime_index,p,new_channel_at,first_composite_use,within_2_100,basis_dimension_after_appearance
+prime_index,p,new_channel_at,first_composite_use,within_range,basis_dimension_after_appearance
 1,2,2,4,yes,1
 2,3,3,6,yes,2
 3,5,5,10,yes,3
