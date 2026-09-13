@@ -1,0 +1,4 @@
+model,samples,mean_sign_changes,sd_sign_changes,empirical_p_ge_actual_9,mean_lag1_corr,sd_lag1_corr,empirical_p_le_actual_corr_minus0.858,min_corr,max_sign_changes
+calibrated_cramer_density,200,3.710000,1.667273,0.009950,0.111226,0.302440,0.004975,-0.748650,9
+dyadic_fixed_count,200,5.215000,1.914970,0.059701,-0.384678,0.285347,0.004975,-0.846823,9
+dyadic_gap_permutation,300,4.443333,1.914595,0.006645,-0.371541,0.292995,0.009967,-0.876526,9
