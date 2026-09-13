@@ -106,6 +106,93 @@
 - Audit note: 논문의 주정리는 별도 가정을 사용할 수 있으므로, 여기서는 도입부의 표준 무조건적 zero-counting formula만 기준으로 사용한다.
 - Audit verdict: `ACCEPT_FOR_STANDARD_ZERO_COUNT_FORMULA`
 
+## S012 — Bertil Nyman (1950), On the One-Dimensional Translation Group and Semi-Group in Certain Function Spaces
+
+- Type: `PRIMARY_CLASSICAL_SOURCE`
+- Form: Uppsala doctoral thesis
+- Role: RH를 실변수 함수공간의 closure 문제로 옮기는 Nyman–Beurling 계보의 출발점
+- Audit limitation: `L^2`/closure reformulation은 RH와 동치인 새 표현이지 RH의 무조건적 증명이 아님.
+- Audit verdict: `ACCEPT_FOR_NYMAN_BEURLING_ORIGIN`
+
+## S013 — Arne Beurling (1955), A Closure Problem Related to the Riemann Zeta-Function
+
+- Type: `PRIMARY_CLASSICAL_SOURCE`
+- Journal: Proceedings of the National Academy of Sciences 41 (1955), 312–314
+- Role: Nyman의 closure 접근을 `L^p`로 일반화. zero-free half-plane `Re(s)>1/p`와 특정 fractional-part dilation span의 `L^p` 조밀성을 연결.
+- Critical audit use: `p=2 -> 1/2`가 Hilbert-space 선택과 연결된다는 고전적 기준.
+- Audit limitation: 왜 산술구조가 `p=2`를 선택해야 하는지를 독립적으로 증명하는 결과는 아님.
+- Audit verdict: `ACCEPT_FOR_LP_CLOSURE_CRITERION`
+
+## S014 — Luis Báez-Duarte (1999), A Class of Invariant Unitary Operators
+
+- Type: `PRIMARY_RESEARCH`
+- Journal: Advances in Mathematics 144(1) (1999), 1–12
+- DOI: 10.1006/aima.1998.1801
+- Role: `L^2((0,∞),dx)`의 dilation operator와 invariant unitary operator를 Nyman–Beurling Hilbert closure 문제와 연결.
+- Audit verdict: `ACCEPT_FOR_DILATION_HILBERT_OPERATOR_CONTEXT`
+
+## S015 — Luis Báez-Duarte (2002), New Versions of the Nyman-Beurling Criterion for the Riemann Hypothesis
+
+- Type: `PRIMARY_RESEARCH`
+- Journal: International Journal of Mathematics and Mathematical Sciences 31(7) (2002), 387–406
+- DOI: 10.1155/S0161171202013248
+- Role: 일반 `L^p`에서 zero-free boundary `Re(s)>1/p`, Möbius/Mertens norm, Nyman–Beurling 근사를 직접 연결.
+- Critical audit use: `1/p` 경계는 `L^p` 선택 전반의 구조임을 확인.
+- Audit verdict: `ACCEPT_FOR_LP_MOBIUS_NB_CONNECTION`
+
+## S016 — Luis Báez-Duarte (2003), A Strengthening of the Nyman-Beurling Criterion for the Riemann Hypothesis
+
+- Type: `PRIMARY_RESEARCH`
+- Journal: Rendiconti Lincei, Matematica e Applicazioni 14 (2003), 5–11
+- Preprint: arXiv:math/0202141
+- Role: 연속 dilation family보다 작은 정수 dilation family만으로도 RH와 동치인 closure criterion을 구성.
+- Audit limitation: 정수 dilation으로 산술화되지만 criterion의 참을 무조건적으로 증명한 것은 아님.
+- Audit verdict: `ACCEPT_FOR_INTEGER_DILATION_CRITERION`
+
+## S017 — Báez-Duarte, Balazard, Landreau & Saias (2000), Notes sur la fonction ζ de Riemann, 3
+
+- Type: `PRIMARY_RESEARCH`
+- Journal: Advances in Mathematics 149(1) (2000), 130–144
+- DOI: 10.1006/aima.1999.1861
+- Role: Nyman–Beurling approximation distance의 정량적 분석과 영점 정보의 연결.
+- Audit verdict: `ACCEPT_FOR_QUANTITATIVE_NB_DISTANCE`
+
+## S018 — Jean-François Burnol (2002), A Lower Bound in an Approximation Problem Involving the Zeros of the Riemann Zeta Function
+
+- Type: `PRIMARY_RESEARCH`
+- Journal: Advances in Mathematics 170(1) (2002), 56–70
+- DOI: 10.1006/aima.2001.2066
+- Role: Nyman–Beurling approximation lower bound를 강화하고, 제타 영점과 연결된 Hilbert-space vectors를 구성. Hilbert–Pólya 관점과도 연결.
+- Audit limitation: RH 증명이 아니라 approximation obstruction/zero geometry 분석.
+- Audit verdict: `ACCEPT_FOR_NB_ZERO_HILBERT_GEOMETRY`
+
+## S019 — Titus Hilberdink (2014), The Group of Squarefree Integers
+
+- Type: `PRIMARY_RESEARCH`
+- Journal: Linear Algebra and its Applications 457 (2014), 383–399
+- DOI: 10.1016/j.laa.2014.05.037
+- Role: squarefree integers가 `m∘n=lcm(m,n)/gcd(m,n)` 아래 Boolean abelian group을 이루며 Möbius 함수가 그 character 중 하나임을 명시. 유한 divisor subgroup의 character/Fourier 구조를 연구.
+- Critical audit use: formation prime-channel symmetric difference와 Möbius parity character의 선행기준.
+- Audit verdict: `ACCEPT_FOR_SQUAREFREE_BOOLEAN_GROUP`
+
+## S020 — Hedenmalm, Lindqvist & Seip (1997), A Hilbert Space of Dirichlet Series and Systems of Dilated Functions in L²(0,1)
+
+- Type: `PRIMARY_RESEARCH`
+- Journal: Duke Mathematical Journal 86(1) (1997), 1–37
+- DOI: 10.1215/S0012-7094-97-08601-4
+- Role: square-summable coefficients의 Dirichlet-series Hilbert space `H²`를 도입하고, 무한차원 polydisc/polytorus의 Hardy `H²`, character space, `L²(0,1)` dilation systems를 직접 연결.
+- Critical audit use: `ell² coefficient -> Dirichlet series -> dilation L²`가 이미 존재하는 강한 선행 다리임을 확인.
+- Audit limitation: Möbius coefficient sequence 자체는 무한 `ell²`에 속하지 않으며, 이 Hilbert geometry만으로 RH를 증명하지 않음.
+- Audit verdict: `ACCEPT_FOR_DIRICHLET_HILBERT_BRIDGE`
+
+## S021 — Defant, García, Maestre & Sevilla-Peris (2019), Hardy Spaces of Dirichlet Series / Bohr’s Problem in Hardy Spaces
+
+- Type: `MODERN_MONOGRAPH_REFERENCE`
+- Work: Dirichlet Series and Holomorphic Functions in High Dimensions, Cambridge University Press
+- Chapter DOI: 10.1017/9781108691611.013 and 10.1017/9781108691611.014
+- Role: Bohr transform를 통한 Dirichlet series와 infinite polytorus Hardy spaces의 현대적 정리. `H²`가 square-summable coefficient space와 일치함을 표준화하며 Hardy-space abscissa 문제에서 `1/2` 경계를 설명.
+- Audit verdict: `ACCEPT_FOR_MODERN_HARDY_DIRICHLET_REFERENCE`
+
 ## Source-use rule
 
 어떤 자료도 `권위 있는 출처`라는 이유만으로 모든 종류의 주장에 사용하지 않는다. 범위, 정리, 계산기록, 최신성, 데이터 완전성은 서로 다른 검증축으로 관리한다.
