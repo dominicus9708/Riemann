@@ -1,0 +1,29 @@
+kind,band_or_window,max_N,beta_or_value,notes
+mobius_band,5-25,4194304,0.4656803352,recent 8 dyadic shells
+mobius_band,30-50,4194304,0.5210057973,recent 8 dyadic shells
+mobius_band,5-50,4194304,0.4994531519,recent 8 dyadic shells
+mobius_band,10-100,4194304,0.5009127027,recent 8 dyadic shells
+mobius_window,5_shells,4194304,0.5844486470,t=5..50
+mobius_window,6_shells,4194304,0.5260331160,t=5..50
+mobius_window,7_shells,4194304,0.4887660450,t=5..50
+mobius_window,8_shells,4194304,0.4994531519,t=5..50
+mobius_window,9_shells,4194304,0.5110967315,t=5..50
+mobius_window,10_shells,4194304,0.5164410972,t=5..50
+mobius_cutoff,rolling_8,262144,0.471542,t=5..50
+mobius_cutoff,rolling_8,524288,0.463146,t=5..50
+mobius_cutoff,rolling_8,1048576,0.527026,t=5..50
+mobius_cutoff,rolling_8,2097152,0.518109,t=5..50
+mobius_cutoff,rolling_8,4194304,0.4994531519,t=5..50
+random_control,seed_1,4194304,0.5413594001,squarefree support random signs
+random_control,seed_2,4194304,0.4554989456,squarefree support random signs
+random_control,seed_3,4194304,0.4655757459,squarefree support random signs
+random_control,seed_4,4194304,0.5004645199,squarefree support random signs
+random_control,seed_5,4194304,0.5367630012,squarefree support random signs
+random_control,seed_10,4194304,0.4956866194,squarefree support random signs
+random_control,seed_20,4194304,0.4635640038,squarefree support random signs
+random_control,seed_30,4194304,0.4928678578,squarefree support random signs
+random_control,seed_40,4194304,0.3935992429,squarefree support random signs
+random_control,seed_50,4194304,0.5494560773,squarefree support random signs
+random_control_summary,mean,4194304,0.4894835414,std=0.0450397905
+positive_control,abs_mu_5-50,4194304,1.0000764057,recent 8 dyadic shells
+positive_control,abs_mu_10-100,4194304,1.0003370465,recent 8 dyadic shells
