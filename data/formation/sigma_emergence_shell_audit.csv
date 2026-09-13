@@ -1,0 +1,13 @@
+observable,max_N,best_sigma,relative_stability_score,notes
+W,16384,0.50,0.1437090914,transient false-positive candidate
+W,32768,0.20,0.0883126670,moved away from 1/2
+W,65536,0.20,0.0530719531,moved away from 1/2
+W,131072,0.45,0.0368499031,returned near but not at 1/2
+W,262144,0.90,0.0281290576,moved to upper search boundary
+W,524288,0.90,0.0244304505,moved to upper search boundary
+omega,16384,0.74,0.3383191861,no stable interior point
+omega,32768,0.80,0.2318009688,no stable interior point
+omega,65536,0.54,0.1626481076,near 1/2 only transiently
+omega,131072,0.20,0.1206003757,moved to lower search boundary
+omega,262144,0.20,0.0889652605,moved to lower search boundary
+omega,524288,0.64,0.0810190522,moved again
