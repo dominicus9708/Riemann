@@ -177,7 +177,8 @@ def write_channels(records: list[dict], path: Path) -> None:
     fields = [
         "n", "class", "sparse_prime_channel_vector",
         "active_channel_count_omega", "total_channel_weight_Omega",
-        "new_channel",
+        "prior_channel_overlap_count", "prior_channel_weight",
+        "new_channel", "event_type",
     ]
     with path.open("w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
@@ -185,13 +186,19 @@ def write_channels(records: list[dict], path: Path) -> None:
         for r in records:
             factors = factorint(r["n"])
             sparse = ";".join(f"{p}:{e}" for p, e in sorted(factors.items()))
+            prime = r["class"] == "prime"
             writer.writerow({
                 "n": r["n"],
                 "class": r["class"],
                 "sparse_prime_channel_vector": sparse,
                 "active_channel_count_omega": r["omega"],
                 "total_channel_weight_Omega": r["Omega"],
-                "new_channel": r["n"] if r["class"] == "prime" else "",
+                "prior_channel_overlap_count": 0 if prime else r["omega"],
+                "prior_channel_weight": 0 if prime else r["Omega"],
+                "new_channel": r["n"] if prime else "",
+                "event_type": (
+                    "new_prime_channel" if prime else "existing_channel_overlap"
+                ),
             })
 
 
