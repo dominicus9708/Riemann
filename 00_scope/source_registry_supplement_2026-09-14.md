@@ -96,6 +96,16 @@
 - Limitation: primary theorem source가 아니므로 Richter의 원논문 및 표준 PNT/Mertens 동치와 함께만 사용.
 - Audit verdict: `ACCEPT_AS_COMMENTARY_NOT_PRIMARY_EVIDENCE`
 
+## S035 — Dimitrios Charamaras & Florian K. Richter (2024–2026), Asymptotic Independence of Ω(n) and Ω(n+1) Along Logarithmic Averages
+
+- Type: `PRIMARY_RESEARCH_PREPRINT`
+- arXiv: 2412.17583; current audited version dated 2026-08-19.
+- Role: `Omega(n)`과 `Omega(n+1)`의 logarithmically averaged two-point asymptotic independence를 quantitative하게 연구.
+- Main quantitative result used here: stated error `O((log log log N)^2/sqrt(log log N))`; an alternative Appendix argument yields `O(1/sqrt(log log N))`, which the paper identifies as the optimal scale in that theorem's setting.
+- Critical audit use: Richter-type/Omega-distribution dynamics에서 `sqrt(log log N)` fluctuation scale가 실제 quantitative benchmark로 재출현함을 확인.
+- Audit limitation: two-point logarithmic-average theorem이며 RH나 one-point Mertens square-root bound를 증명하는 결과가 아님.
+- Audit verdict: `ACCEPT_FOR_QUANTITATIVE_DOUBLE_LOG_BENCHMARK`
+
 ## Supplement rule
 
 이 supplement의 source도 본 registry와 동일하게 역할별로만 사용한다. 특히 random-model theorem, computational identity, equivalent criterion을 RH의 무조건적 증명으로 승격하지 않는다.
