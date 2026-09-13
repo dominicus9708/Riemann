@@ -41,7 +41,7 @@
 ## S005 — NIST DLMF §25.10
 
 - Type: `STANDARD_REFERENCE`
-- Role: 자명/비자명 영점, 임계띠, 대칭, Z(t) 정의
+- Role: 자명/비자명 영점, 임계띠, 대칭, Z(t) 정의, Riemann–Siegel 공식의 표준 개요
 - Audit warning: 대칭성은 RH를 함의하지 않는다. 영점 집합이 대칭이라는 사실과 개별 영점이 대칭축 위에 있다는 명제는 구별한다.
 - Audit verdict: `ACCEPT_FOR_ZERO_STRUCTURE`
 - URL: https://dlmf.nist.gov/25.10
@@ -65,6 +65,46 @@
 - URLs:
   - https://www.lmfdb.org/knowledge/show/rcs.source.zeros.zeta
   - https://www.lmfdb.org/knowledge/show/rcs.cande.zeros.zeta
+
+## S008 — NIST DLMF §25.16
+
+- Type: `STANDARD_REFERENCE`
+- Role: Chebyshev psi 함수, 제타 영점과 소수분포의 연결, RH 동치 오차식
+- Main result used here: RH iff psi(x)=x+O(x^(1/2+epsilon)) for every epsilon>0.
+- Strength: 표준 정의와 동치명제를 명확하게 분리해 제공
+- Audit warning: 명시적 공식의 영점 합은 합산 순서/극한 규약을 요구한다. 유한 영점 합을 그대로 정확식으로 사용하지 않는다.
+- Audit verdict: `ACCEPT_FOR_PRIME_ZERO_CONNECTION`
+- URL: https://dlmf.nist.gov/25.16
+
+## S009 — David J. Platt (2017), Isolating some non-trivial zeros of zeta
+
+- Type: `PRIMARY_RESEARCH`
+- Journal: Mathematics of Computation 86 (2017), 2449–2467
+- DOI: 10.1090/mcom/3198
+- Role: 엄밀한 제타 계산과 영점 고립, 대규모 유한범위 인증의 원 계산 근거
+- Reported scope: imaginary part <= 30,610,046,000; absolute precision ±2^-102
+- Strength: peer-reviewed primary computation paper
+- Audit limitation: 유한 높이 검증이며 전역 RH 증명이 아님. 재현 구현이 동일한 엄밀성을 갖기 위해서는 interval/error enclosure와 completeness proof를 별도로 구현해야 함.
+- Audit verdict: `ACCEPT_AS_PRIMARY_RIGOROUS_COMPUTATION_SOURCE`
+
+## S010 — Platt & Trudgian (2021), The Riemann hypothesis is true up to 3·10^12
+
+- Type: `PRIMARY_RESEARCH`
+- Journal: Bulletin of the London Mathematical Society 53 (2021), 792–797
+- DOI: 10.1112/blms.12460
+- Role: 현대적인 엄밀 유한높이 RH 검증 기준
+- Reported claim: interval arithmetic로 0<gamma<=3×10^12의 모든 비자명 영점이 beta=1/2이며 해당 범위의 영점이 simple임을 검증
+- Strength: peer-reviewed, 유한범위가 명시된 엄밀 계산 주장
+- Audit limitation: finite-height theorem/computation; global RH로 외삽 금지
+- Audit verdict: `ACCEPT_AS_FINITE_RIGOROUS_VERIFICATION`
+
+## S011 — Chirre (2021), Large oscillations of the argument of the Riemann zeta-function
+
+- Type: `PRIMARY_RESEARCH`
+- Journal: Bulletin of the London Mathematical Society
+- Role: 현대 문헌에서의 Riemann–von Mangoldt 공식 표기와 S(t) 정의 교차검증
+- Audit note: 논문의 주정리는 별도 가정을 사용할 수 있으므로, 여기서는 도입부의 표준 무조건적 zero-counting formula만 기준으로 사용한다.
+- Audit verdict: `ACCEPT_FOR_STANDARD_ZERO_COUNT_FORMULA`
 
 ## Source-use rule
 
