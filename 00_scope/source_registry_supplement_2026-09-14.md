@@ -60,6 +60,42 @@
 - Critical audit use: random multiplicative model을 deterministic Möbius proof로 직접 이전할 수 없음을 강화.
 - Audit verdict: `ACCEPT_FOR_RANDOM_CHARACTER_LARGE_FLUCTUATION_BASELINE`
 
+## S031 — Florian K. Richter (2021), A New Elementary Proof of the Prime Number Theorem
+
+- Type: `PRIMARY_RESEARCH`
+- Journal: Bulletin of the London Mathematical Society 53 (2021), 1365–1375
+- DOI: 10.1112/blms.12503
+- Role: `Omega(n)`의 additive shift-invariance를 이용해 PNT를 도출하는 새로운 elementary proof.
+- Main structural result used in audit: bounded `g`에 대해 평균적으로 `g(Omega(n)+1)`과 `g(Omega(n))`의 차이가 사라지는 shift-invariance.
+- Critical audit use: weighted-prime Boolean threshold의 parity decorrelation이 PNT 수준에서 기존 연구와 연결됨을 확인.
+- Audit limitation: RH 수준 `M(x)=O_epsilon(x^(1/2+epsilon))` 정량상계를 주는 논문은 아님.
+- Audit verdict: `ACCEPT_FOR_PNT_PARITY_DECORRELATION_CONTEXT`
+
+## S032 — Yuval Peres, Noise Stability of Weighted Majority
+
+- Type: `PRIMARY_RESEARCH`
+- Preprint: arXiv:math/0412377; later published as a book chapter.
+- Role: arbitrary weighted majority/halfspace의 noise sensitivity를 `O(sqrt(epsilon))` 수준으로 제어.
+- Critical audit use: 일반 Boolean-halfspace Fourier tail/noise bounds가 arithmetic rare-event threshold의 RH-scale top parity coefficient를 자동으로 제어하지 못함을 비교하는 기준.
+- Audit verdict: `ACCEPT_FOR_GENERIC_WEIGHTED_MAJORITY_NOISE_BOUND`
+
+## S033 — Diakonikolas, Jaiswal, Servedio, Tan & Wan (2012), On the Distribution of the Fourier Spectrum of Halfspaces
+
+- Type: `PRIMARY_RESEARCH`
+- Preprint: arXiv:1202.6680
+- Role: Boolean halfspace의 Fourier spectrum이 저차/특정 구조에 집중되는 정량결과를 연구.
+- Critical audit use: 일반 halfspace spectral concentration과 arithmetic weighted-halfspace endpoint parity coefficient를 구별하는 기준.
+- Audit limitation: `log p` weights와 threshold `log X`의 극희박 영역에서 RH square-root cancellation을 함의하지 않음.
+- Audit verdict: `ACCEPT_FOR_GENERIC_HALFSPACE_FOURIER_BASELINE`
+
+## S034 — Gil Kalai (2020), Expository Commentary on Richter's PNT Proof
+
+- Type: `EXPOSITORY_COMMENTARY`
+- Role: weights `log p_j`와 threshold `log X`인 weighted-majority Boolean function에서 최고차 parity Fourier coefficient를 PNT와 연결하는 해설적 관점을 명시.
+- Critical audit use: `2^m fhat([m])=M(X)` 및 density 대비 top-coefficient decorrelation이라는 표현이 선행 해설에 이미 존재함을 확인.
+- Limitation: primary theorem source가 아니므로 Richter의 원논문 및 표준 PNT/Mertens 동치와 함께만 사용.
+- Audit verdict: `ACCEPT_AS_COMMENTARY_NOT_PRIMARY_EVIDENCE`
+
 ## Supplement rule
 
 이 supplement의 source도 본 registry와 동일하게 역할별로만 사용한다. 특히 random-model theorem, computational identity, equivalent criterion을 RH의 무조건적 증명으로 승격하지 않는다.
