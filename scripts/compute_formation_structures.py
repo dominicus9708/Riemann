@@ -152,7 +152,7 @@ def write_summary(records: list[dict], path: Path) -> None:
         "unordered_tree_count", "min_tree_depth", "max_tree_depth",
     ]
     with path.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fields)
+        writer = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         for r in records:
             writer.writerow({
@@ -169,6 +169,50 @@ def write_summary(records: list[dict], path: Path) -> None:
                 "unordered_tree_count": len(r["unordered_factor_trees"]),
                 "min_tree_depth": r["min_tree_depth"],
                 "max_tree_depth": r["max_tree_depth"],
+            })
+
+
+def write_channels(records: list[dict], path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fields = [
+        "n", "class", "sparse_prime_channel_vector",
+        "active_channel_count_omega", "total_channel_weight_Omega",
+        "new_channel",
+    ]
+    with path.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
+        writer.writeheader()
+        for r in records:
+            factors = factorint(r["n"])
+            sparse = ";".join(f"{p}:{e}" for p, e in sorted(factors.items()))
+            writer.writerow({
+                "n": r["n"],
+                "class": r["class"],
+                "sparse_prime_channel_vector": sparse,
+                "active_channel_count_omega": r["omega"],
+                "total_channel_weight_Omega": r["Omega"],
+                "new_channel": r["n"] if r["class"] == "prime" else "",
+            })
+
+
+def write_activation(records: list[dict], path: Path, hi: int) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    primes = [r["n"] for r in records if r["class"] == "prime"]
+    fields = [
+        "prime_index", "p", "new_channel_at", "first_composite_use",
+        "within_range", "basis_dimension_after_appearance",
+    ]
+    with path.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
+        writer.writeheader()
+        for j, p in enumerate(primes, start=1):
+            writer.writerow({
+                "prime_index": j,
+                "p": p,
+                "new_channel_at": p,
+                "first_composite_use": 2 * p,
+                "within_range": "yes" if 2 * p <= hi else "no",
+                "basis_dimension_after_appearance": j,
             })
 
 
@@ -210,6 +254,16 @@ def main() -> None:
         type=Path,
         default=Path("data/formation/formation_detail_2_100.json"),
     )
+    parser.add_argument(
+        "--channels",
+        type=Path,
+        default=Path("data/formation/prime_channel_vectors_2_100.csv"),
+    )
+    parser.add_argument(
+        "--activation",
+        type=Path,
+        default=Path("data/formation/prime_channel_activation_2_100.csv"),
+    )
     args = parser.parse_args()
 
     if args.lo < 2 or args.hi < args.lo:
@@ -218,6 +272,8 @@ def main() -> None:
     records = [make_record(n) for n in range(args.lo, args.hi + 1)]
     write_summary(records, args.summary)
     write_detail(records, args.detail, args.lo, args.hi)
+    write_channels(records, args.channels)
+    write_activation(records, args.activation, args.hi)
 
 
 if __name__ == "__main__":
