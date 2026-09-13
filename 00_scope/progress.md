@@ -37,8 +37,12 @@ Status: `MINIMUM_COMPLETE`.
 - [x] Riemann–von Mangoldt baseline
 - [x] local mean spacing normalization
 - [x] numerical N(T) regression
+- [x] first-1,000 gap/normalized-gap summary
+- [ ] first-100,000 distribution corpus
+- [ ] Gram-interval occupancy statistics
+- [ ] high-height window comparison
 
-Status: `MINIMUM_COMPLETE`.
+Status: `MINIMUM_COMPLETE / DISTRIBUTION_EXPANSION_IN_PROGRESS`.
 
 ## Phase 4 — Prime connection
 
@@ -57,6 +61,10 @@ Status: `MINIMUM_COMPLETE`.
 - [x] Gram-point negative-control fixture
 - [x] zero finding vs certification distinction
 - [x] Platt/LMFDB/Turing provenance baseline
+- [x] first 1,000 direct zeros generated and hashed
+- [x] Odlyzko and Wolfram sample cross-check
+- [x] numerical error/certification budget
+- [x] external Odlyzko dataset manifest
 - [ ] independent interval-arithmetic implementation
 - [ ] Turing-style certified finite-range reproduction
 
@@ -64,13 +72,13 @@ Status: `MINIMUM_COMPLETE / CERTIFICATION_PENDING`.
 
 ## Next ordered work
 
-1. expand baseline zeros to 1,000 with external cross-check;
-2. derive/store distribution statistics and Gram-interval structure;
-3. prepare high-height separated windows;
-4. formalize computation error budget;
-5. build `06_equivalent_criteria` with strict direction-of-implication audit;
-6. only then begin `07_known_partial_results` and proof-family comparison.
+1. ingest/analyze the first 100,000 Odlyzko zeros without blindly committing the raw file;
+2. derive gap, normalized-gap, local-density and Gram-interval statistics;
+3. analyze the `10^12`, `10^21`, `10^22` index windows as high-height stress tests;
+4. build `06_equivalent_criteria` with strict direction-of-implication audit;
+5. then build `07_known_partial_results`;
+6. only after those baselines begin `08_approach_families` proof-family comparison.
 
 ## Proof-comparison gate
 
-Major proof-family comparison remains **closed** until the 1,000-zero cross-check and computation error-budget documents are complete. This prevents proof ideas from defining the baseline they are supposed to be tested against.
+The previous 1,000-zero/error-budget gate has been passed. Major proof-family comparison remains **closed** until the first-100,000 distribution baseline, high-height stress-window audit, and equivalent-criteria dependency map are complete. This prevents proof ideas from defining the baseline they are supposed to be tested against.
