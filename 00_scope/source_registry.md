@@ -193,6 +193,35 @@
 - Role: Bohr transform를 통한 Dirichlet series와 infinite polytorus Hardy spaces의 현대적 정리. `H²`가 square-summable coefficient space와 일치함을 표준화하며 Hardy-space abscissa 문제에서 `1/2` 경계를 설명.
 - Audit verdict: `ACCEPT_FOR_MODERN_HARDY_DIRICHLET_REFERENCE`
 
+## S022 — Anders Björner (2011), A Cell Complex in Number Theory
+
+- Type: `PRIMARY_RESEARCH`
+- Journal: Advances in Applied Mathematics 46 (2011), 71–85
+- DOI: 10.1016/j.aam.2010.09.007
+- Role: squarefree integers `<=n` ordered by divisibility를 simplicial complex로 보고 Euler characteristic/Mertens function, Betti numbers, wedge-of-spheres 구조를 연구.
+- Critical audit use: weighted prime-product threshold complex가 이미 직접적인 RH/topological literature에 속함을 확인.
+- Audit limitation: topology/Betti information만으로 Mertens square-root bound를 주지 않음.
+- Audit verdict: `ACCEPT_FOR_NUMBER_THEORETIC_THRESHOLD_COMPLEX`
+
+## S023 — Jonathan Pakianathan & Troy Winfree (2013), Threshold Complexes and Connections to Number Theory
+
+- Type: `PRIMARY_RESEARCH`
+- Journal: Turkish Journal of Mathematics 37(3) (2013)
+- DOI: 10.3906/mat-1112-14
+- Role: scalar-weight quota/threshold complexes와 quota 변화에 따른 topology를 연구하고 PNT, RH 등 수론문제를 위상적 formulation으로 연결.
+- Critical audit use: `sum log p_j epsilon_j <= log X` 형식의 formation cutoff가 일반 threshold/quota-complex 이론과 겹침을 확인.
+- Audit limitation: threshold-complex reformulation 자체는 RH 증명이 아님.
+- Audit verdict: `ACCEPT_FOR_THRESHOLD_QUOTA_CONTEXT`
+
+## S024 — Anders Björner & Martin Tancer (2009), Combinatorial Alexander Duality — A Short and Elementary Proof
+
+- Type: `PRIMARY_RESEARCH`
+- Journal: Discrete & Computational Geometry 42 (2009), 586–593
+- DOI: 10.1007/s00454-008-9102-x
+- Role: finite Boolean ground set에서 `X*={A:V\A notin X}` 형태의 complement-based Alexander duality를 정식화.
+- Critical audit use: primorial divisor complement `d <-> P_m/d`가 일반 Boolean complement duality의 산술 실현임을 판별하는 기준.
+- Audit verdict: `ACCEPT_FOR_COMPLEMENT_ALEXANDER_DUALITY`
+
 ## Source-use rule
 
 어떤 자료도 `권위 있는 출처`라는 이유만으로 모든 종류의 주장에 사용하지 않는다. 범위, 정리, 계산기록, 최신성, 데이터 완전성은 서로 다른 검증축으로 관리한다.
