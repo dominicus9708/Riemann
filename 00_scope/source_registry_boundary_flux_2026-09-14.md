@@ -31,6 +31,16 @@ This note extends the same evidence rules as `source_registry.md` and `source_re
 - Limitation: their identities are not asserted to be the same formula as this repository's Boolean connected difference.
 - Audit verdict: `ACCEPT_FOR_MERTENS_RECURSION_AND_BILINEAR_CONTEXT`.
 
+## S039 — O. Gorodetsky (2026), A Kubilius model for sieve-theoretic sequences
+
+- Type: `PRIMARY_RESEARCH`.
+- Journal: Analysis Mathematica (2026), published 14 August 2026.
+- DOI: `10.1007/s10476-026-00178-w`.
+- Role: modern total-variation version of the Kubilius probabilistic model for sieve-theoretic sequences with positive level of distribution.
+- Critical audit use: independent prime-divisibility Bernoulli models are a standard probabilistic-number-theory baseline rather than a new formation assumption.
+- Limitation: the exact CRT tensor-orthogonality calculation in this repository does not depend on Gorodetsky's theorem; this source is used only for modern model context and not as support for RH claims.
+- Audit verdict: `ACCEPT_FOR_KUBILIUS_SIEVE_MODEL_CONTEXT`.
+
 ## Current audit consequence
 
-The connected-boundary branch must demonstrate a structure that survives after known Möbius/inclusion-exclusion recursion is removed. A mere re-expression of the Mertens function, restricted Mertens sums, or bilinear Möbius forms remains a representation change rather than independent RH progress.
+The connected-boundary branch must demonstrate a structure that survives after known Möbius/inclusion-exclusion recursion is removed. A mere re-expression of the Mertens function, restricted Mertens sums, bilinear Möbius forms, or independent prime-divisibility tensor variance remains a representation/model change rather than independent RH progress.
