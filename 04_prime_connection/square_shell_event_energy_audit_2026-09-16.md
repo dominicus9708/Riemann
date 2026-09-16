@@ -6,6 +6,7 @@
 - Prime-power separation at square endpoints: EXACT.
 - Finite computation through x <= 5,000,000: NUMERICAL / all tested complete square shells have negative event-energy increment.
 - Uniform one-shell or fixed-K square-shell negativity: CLOSED by Littlewood positive oscillations + Brun–Titchmarsh occupancy control.
+- Absolute-value control of the within-shell centroid term: CLOSED at leading scale.
 - Scale-growing shell compensation: OPEN.
 
 ## 1. Exact square-shell decomposition
@@ -114,7 +115,7 @@ L_m\frac{P_m+P_{m+1}}2
 }
 \]
 
-The leading term of P_m is the prime-square layer theta(m) ~ m. Since L_m ~ 2m, its shell reserve is naturally of order -m^2. Summing to M gives the familiar x^{3/2} scale with x=M^2.
+The leading term of P_m is the prime-square layer theta(m) ~ m. Its shell contribution is therefore naturally on the m^2 scale whenever the shell carries its expected logarithmic mass. Summing to M produces the x^{3/2} prime-square scale with x=M^2.
 
 This explains why square shells are the geometrically natural shell scale for the prime-square reserve. It does not prove the required sign because the R_m transport and Q_m placement terms remain.
 
@@ -250,7 +251,105 @@ Audit tag:
 
 `PRIME_SQUARE_RECOVERY_HORIZON_GUARD`.
 
-## 6. Surviving scale-growing target
+## 6. Exact chord-residual form of the placement term
+
+Let
+
+\[
+h_m=(m+1)^2-m^2=2m+1,
+\]
+
+and on the shell define the linear chord joining the two theta endpoints,
+
+\[
+C_m(t)=\vartheta(m^2)+\frac{t-m^2}{h_m}L_m.
+\]
+
+Stieltjes integration by parts gives
+
+\[
+\sum_{m^2<p\le(m+1)^2}p\log p
+=(m+1)^2L_m-
+\int_{m^2}^{(m+1)^2}\bigl(\vartheta(t)-\vartheta(m^2)\bigr)dt.
+\]
+
+Therefore
+
+\[
+\boxed{
+Q_m=-\int_{m^2}^{(m+1)^2}\bigl(\vartheta(t)-C_m(t)\bigr)dt.
+}
+\]
+
+Thus Q_m is exactly the signed area between the local theta staircase and its endpoint chord. It is not an independent statistic: it is the within-shell shape information discarded by endpoint-only summaries.
+
+## 7. Absolute centroid bound saturates the prime-square reserve scale
+
+Because every p in I_m satisfies
+
+\[
+|p-c_m|\le\frac{h_m}{2},
+\]
+
+and all log p weights are positive,
+
+\[
+\boxed{
+|Q_m|\le\frac{h_m}{2}L_m.
+}
+\]
+
+The prime-power reserve term in the exact shell decomposition is
+
+\[
+L_m\frac{P_m+P_{m+1}}2.
+\]
+
+Whenever L_m>0, the ratio between the trivial support bound for |Q_m| and this reserve is
+
+\[
+\frac{(h_m/2)L_m}{L_m(P_m+P_{m+1})/2}
+=
+\frac{h_m}{P_m+P_{m+1}}.
+\]
+
+Now
+
+\[
+P_m=\vartheta(m)+O(m^{2/3})\sim m
+\]
+
+by the ordinary prime number theorem applied at the root scale. Hence
+
+\[
+P_m+P_{m+1}\sim2m+1=h_m,
+\]
+
+so
+
+\[
+\boxed{
+\frac{(h_m/2)L_m}{L_m(P_m+P_{m+1})/2}\to1.
+}
+\]
+
+Therefore triangle inequality / support-only control of Q_m is asymptotically coefficient-sharp against the leading prime-square reserve. It cannot leave a deterministic positive margin.
+
+Classification:
+
+`CENTROID_SUPPORT_BOUND_SATURATION`.
+
+This closes any continuation that estimates Q_m only by |p-c_m|<=h_m/2, Holder, or an equivalent unsigned support norm. A surviving argument must use the sign/order of prime placement across shells, or a joint cancellation with the psi-transport term.
+
+For the finite N=5,000,000 audit, the observed ratio
+
+\[
+\frac{|Q_m|}{(h_m/2)L_m}
+\]
+
+had maximum approximately 0.36794 (at m=10), median approximately 0.02231, and 99th percentile approximately 0.15068. This is useful numerical structure, but the exact support bound shows that such small finite ratios cannot be assumed uniformly.
+
+## 8. Surviving scale-growing target
 
 For K=K(m) define
 
@@ -275,15 +374,22 @@ L_j\frac{P_j+P_{j+1}}2
 }
 \]
 
-The middle term is the explicit prime-power reserve; its leading square contribution is visible without zero input. The first and third terms are the remaining psi-transport and within-shell placement terms.
+The middle term is the explicit prime-power reserve; its leading square contribution is visible without zero input. The first and third terms are the remaining psi-transport and signed within-shell placement terms.
 
-The next viable question is therefore not `is every square shell negative?` but:
+The next viable question is therefore not `is every square shell negative?` and not `can |Q_m| be bounded absolutely?` but:
 
-Can one prove a scale-growing, nonlocal inequality in which the combined R_j transport and Q_j placement terms are dominated by the accumulated P_j prime-power reserve, without importing an RH-equivalent bound for psi(x)-x or a Weil/Li explicit-formula positivity criterion?
+Can one prove a scale-growing, nonlocal inequality in which the JOINT signed quantity
+
+\[
+\sum_{j=m}^{m+K-1}\left[L_j\frac{R_j+R_{j+1}}2-Q_j\right]
+\]
+
+is dominated by the accumulated prime-power reserve, without importing an RH-equivalent bound for psi(x)-x or a Weil/Li explicit-formula positivity criterion?
 
 Any proposed answer must be tested against:
 - `FIXED_SQUARE_SHELL_LOCALITY_BARRIER`;
 - `PRIME_SQUARE_RECOVERY_HORIZON_GUARD`;
+- `CENTROID_SUPPORT_BOUND_SATURATION`;
 - `SELBERG_HARDY_AVERAGING_BARRIER`;
 - `HYPERBOLA_EXPONENT_INFLATION`;
 - `KERNEL_MARGIN_DELAY_DUALITY`;
