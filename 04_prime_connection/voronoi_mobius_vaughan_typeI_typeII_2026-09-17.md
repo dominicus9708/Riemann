@@ -4,25 +4,22 @@
 - Riemann hypothesis: OPEN.
 - Vaughan decomposition for Möbius: STANDARD.
 - Natural decomposition parameter tied to reciprocal-phase resolution: DERIVED.
-- Type I branch: CLOSED at the required square-root power (up to logarithms).
-- Type II branch: reduced to a multivariate monomial exponential mean-value problem.
-- Existing Baker–Weingartner / multivariate monomial literature: DIRECTLY RELEVANT functional class, but theorem-level applicability to the exact critical target not yet verified.
+- Type I branch: CLOSED at the required square-root power up to polylogarithms, with an endpoint-resonance correction.
+- Type II branch: reduced to a real bilinear/three-variable monomial exponential mean-value problem.
+- Baker–Weingartner real bilinear monomial literature: DIRECTLY RELEVANT functional class; available published-style bounds are not strong enough pointwise for the present critical target.
+- Shparlinski 2014 multivariate monomial paper: FINITE-FIELD additive-character setting; comparison only, not a directly applicable theorem here.
 
-## 1. Reciprocal phase on one dyadic d-block
+## 1. Reciprocal phase on one dyadic arithmetic block
 
-Fix a Voronoi n-scale `n~N` and an arithmetic variable block `r~D` (we use `r` here to avoid conflict with the outer Voronoi index). Put
-
-\[
-A:=2K\sqrt N
-\]
-
-at scale level and consider
+Fix a Voronoi scale `n~N` and an arithmetic variable block `r~D`. Put, at scale level,
 
 \[
+A:=2K\sqrt N,
+\qquad
 f(r)=e(A r^{-1/2}).
 \]
 
-The reciprocal-resolution length found earlier is
+The reciprocal-resolution length is
 
 \[
 \boxed{
@@ -31,13 +28,13 @@ H:=\frac{D^{3/2}}{K\sqrt N}
 }
 \]
 
-In the unresolved sector one has
+In the unresolved sector,
 
 \[
 1\lesssim H\lesssim D^{1/2}.
 \]
 
-Equivalently the total oscillation parameter is
+The total oscillation parameter is
 
 \[
 \boxed{
@@ -45,17 +42,17 @@ F:=\frac{A}{\sqrt D}\asymp\frac{D}{H},
 }
 \]
 
-so the unresolved sector still has at least `F >= sqrt(D)` oscillations across the full d-block.
+hence `F >= sqrt(D)` in this sector.
 
-## 2. Möbius Vaughan decomposition
+## 2. Möbius Vaughan decomposition and the natural cutoff
 
-Use the standard Vaughan decomposition for Möbius (as in Green--Tao's quadratic-uniformity treatment). For parameters `U,V` with `UV<=D`, a sum
+Use the standard Vaughan decomposition for the Möbius function (for example the form used by Green–Tao). For parameters `U,V` with `UV<=D`,
 
 \[
 \sum_{D<r\le2D}\mu(r)f(r)
 \]
 
-splits into a Type I expression with composite divisor variable up to `UV` and a Type II expression in a factorization `r=ab` whose factors lie beyond the chosen truncation scales.
+splits into a Type I expression with composite divisor variable up to `UV`, plus a Type II factorization term.
 
 Choose
 
@@ -63,21 +60,11 @@ Choose
 \boxed{U=V=H^{1/2}.}
 \]
 
-Then
+Then `UV=H<=sqrt(D)`, so the decomposition is admissible. The choice aligns the Type-I cutoff with the reciprocal derivative threshold.
 
-\[
-UV=H\le D^{1/2}<D,
-\]
+## 3. Type I: ordinary region and endpoint resonance
 
-so the decomposition is admissible.
-
-This choice is not arbitrary:
-- Type I composite divisor `d` satisfies `d<=H`, exactly the low-derivative region;
-- Type II has both factor variables beyond roughly `sqrt(H)`, exposing the multiplicatively separable reciprocal phase.
-
-## 3. Type I is at the required power
-
-The Type I inner sum has the shape
+The inner Type-I sum has the form
 
 \[
 S_d
@@ -93,60 +80,71 @@ For fixed d,
 =\frac{A}{2}d^{-1/2}w^{-3/2}.
 \]
 
-On `w~D/d`, this is
+On `w~D/d`, the derivative is of scale
 
 \[
-\asymp\frac{A d}{D^{3/2}}
 \asymp\frac dH.
 \]
 
-More precisely, on a standard dyadic w-interval and for `d<=H`, its magnitude stays below a fixed constant <1 and is bounded below by a constant multiple of `d/H`. Thus there is no nonzero-integer derivative resonance, and the Kusmin--Landau / first-derivative estimate gives
+For `d` bounded away from the upper endpoint `H`, the derivative remains separated from every nonzero integer and the first-derivative/Kusmin–Landau estimate gives the expected
 
 \[
-\boxed{|S_d|\ll H/d.}
+|S_d|\ll H/d
 \]
 
-The Vaughan Type-I coefficient
+(up to absolute endpoint constants).
+
+One must **not** assert uniform nonresonance all the way to `d=H`: near the lower endpoint of the w-block and `d≈H`, the derivative may approach the integer `1`. This is a thin endpoint-resonance layer.
+
+In that layer, the second derivative satisfies at scale
 
 \[
-a_d=\sum_{bc=d,\ b\le U,\ c\le V}\mu(b)\mu(c)
+|f''(w)|\asymp\frac{d^2}{HD}.
 \]
 
-satisfies the crude but sufficient bound
-
-\[
-|a_d|\le\tau(d).
-\]
-
-Hence the unweighted Type-I contribution obeys
-
-\[
-|T_I|
-\ll H\sum_{d\le H}\frac{\tau(d)}d
-\ll H\log^2(2H).
-\]
-
-Since `H<=sqrt(D)`,
+Combining a second-derivative estimate in the near-resonant d-range with the first-derivative estimate away from it yields, after summing d and allowing divisor weights,
 
 \[
 \boxed{
-T_I\ll D^{1/2}\log^2 D.
+\sum_{d\le H}|a_d||S_d|
+\ll H\,\log^{O(1)}D,
 }
 \]
 
-Restoring the slowly varying Voronoi coefficient `r^(-1/4)~D^(-1/4)` gives
+where
+
+\[
+a_d=\sum_{bc=d,\ b\le U,\ c\le V}\mu(b)\mu(c),
+\qquad |a_d|\le\tau(d).
+\]
+
+Thus
 
 \[
 \boxed{
-T_I^{\rm weighted}\ll D^{1/4}\log^2D,
+T_I\ll H\log^{O(1)}D
+\ll D^{1/2}\log^{O(1)}D.
 }
 \]
 
-which is the desired square-root-energy pointwise power for this dyadic block.
+Restoring the slowly varying Voronoi coefficient `r^{-1/4}~D^{-1/4}` gives
+
+\[
+\boxed{
+T_I^{\rm weighted}
+\ll D^{1/4}\log^{O(1)}D,
+}
+\]
+
+which is the required power scale.
 
 Classification:
 
 `RECIPROCAL_VAUGHAN_TYPEI_CLOSED`.
+
+Permanent correction:
+
+`TYPEI_ENDPOINT_RESONANCE_GUARD` — the Type-I closure uses a first/second derivative split near `d≈H`; do not state that the first derivative is uniformly separated from every integer for all `d<=H`.
 
 ## 4. Exact Type-II phase factorization
 
@@ -157,13 +155,13 @@ e\!\left(A(ab)^{-1/2}\right)
 =e\!\left(Aa^{-1/2}b^{-1/2}\right).
 \]
 
-Thus it is a bilinear monomial phase with exponents
+Thus it is a real bilinear monomial phase with
 
 \[
 \boxed{\alpha=\beta=-1/2.}
 \]
 
-After a rectangular Cauchy differencing, the four-point phase difference factorizes **exactly**:
+The rectangular four-point difference factorizes exactly:
 
 \[
 \begin{aligned}
@@ -174,110 +172,124 @@ After a rectangular Cauchy differencing, the four-point phase difference factori
 \end{aligned}
 \]
 
-This exact product structure is the reason the Type-II branch belongs naturally to double-large-sieve / bilinear-monomial theory rather than to a generic Chowla-correlation treatment.
+Hence this branch is naturally a bilinear-monomial / double-large-sieve problem rather than a generic Chowla problem.
 
-## 5. Correct oscillation parameter
+## 5. Correct normalized oscillation parameter
 
-On factor blocks
+On
 
 \[
-a\asymp M,\qquad b\asymp L,\qquad ML\asymp D,
+a\asymp M,
+\qquad b\asymp L,
+\qquad ML\asymp D,
 \]
 
-the phase may be normalized as
+write
 
 \[
 A a^{-1/2}b^{-1/2}
 =
-F
-\frac{a^{-1/2}b^{-1/2}}{M^{-1/2}L^{-1/2}},
+F\frac{a^{-1/2}b^{-1/2}}{M^{-1/2}L^{-1/2}},
 \]
 
-with
+where
 
 \[
-\boxed{
-F=A D^{-1/2}\asymp D/H.
-}
+\boxed{F=A D^{-1/2}\asymp D/H.}
 \]
 
-Since `H<=sqrt(D)`,
+Thus `sqrt(D) <= F <= D` throughout the unresolved sector.
+
+## 6. Two-variable published bounds are not enough pointwise
+
+Baker–Weingartner (2013), *Some applications of the double large sieve*, studies real bilinear monomial sums
 
 \[
-F\gtrsim D^{1/2}.
+\sum_{m\sim M}\sum_{n\sim L}a_m b_n
+ e\!\left(
+F\frac{m^\alpha n^\beta}{M^\alpha L^\beta}
+\right),
+\qquad |a_m|,|b_n|\le1.
 \]
 
-Therefore the Type-II boxes are not low-frequency perturbations. They sit in a genuinely oscillatory monomial regime.
+A later paper quoting their Theorem 1 records bounds containing terms of the shape
 
-## 6. Why the outer Voronoi mean square must be retained
+\[
+M^{7/8}L^{13/16}F^{1/16},
+\quad
+M^{93/104}L^{23/26}F^{1/26},
+\]
 
-A pointwise arbitrary-coefficient Type-II estimate is stronger than needed and incurs diagonal/Cauchy losses. The actual target is the dyadic outer mean square.
+\[
+M^{467/512}L^{65/64}F^{-1/128},
+\quad
+M^{65/72}L,
+\]
 
-Ignoring divisor-bounded logarithmic factors and restoring factor coefficients schematically, the required unweighted Type-II target is
+in its applicable parameter regime.
+
+Even under the optimistic balanced test `M~L~D^{1/2}` and the smallest present oscillation `F~D^{1/2}`, the first displayed term is already of order about
+
+\[
+D^{7/8},
+\]
+
+far above the pointwise square-root target `D^{1/2+epsilon}`. Hence importing the classical two-variable theorem pointwise cannot close the present branch.
+
+This is a **scale comparison**, not a claim that every refinement of Baker–Weingartner fails.
+
+Classification:
+
+`TYPEII_TWO_VARIABLE_POINTWISE_DEFICIT`.
+
+## 7. Why the outer Voronoi mean square must be retained
+
+The actual problem does not require a pointwise `D^{1/2}` bound for every outer n. The target is
 
 \[
 \boxed{
 \sum_{N<n\le2N}
 \left|
-\sum_{\substack{ab\asymp D\\ a,b\gtrsim H^{1/2}}}
+\sum_{\substack{ab\asymp D\\a,b\gtrsim H^{1/2}}}
 \alpha_a\beta_b
  e\!\left(2K\sqrt n\,a^{-1/2}b^{-1/2}\right)
 \right|^2
 \ll_\varepsilon
-N D^{1+\varepsilon}.
+ND^{1+\varepsilon}.
 }
 \]
 
-Multiplying by the squared Voronoi weight `D^(-1/2)` then gives the desired
+After restoring the squared Voronoi weight `D^{-1/2}`, this becomes the desired `ND^{1/2+epsilon}` contribution.
 
-\[
-N D^{1/2+\varepsilon}
-\]
-
-contribution.
-
-The phase is now the three-variable monomial
+The phase is the real three-variable monomial
 
 \[
 \boxed{n^{1/2}a^{-1/2}b^{-1/2}.}
 \]
 
-## 7. Literature alignment
+Therefore the live analytic object is a **three-variable real monomial mean square**, not the already-audited two-variable pointwise sum.
 
-Baker--Weingartner (2013), *Some applications of the double large sieve*, explicitly studies arbitrary-coefficient bilinear sums of the form
+## 8. Literature boundary correction
 
-\[
-\sum_{m\sim M}\sum_{n\sim N}a_m b_n
- e\!\left(
-F\frac{m^\alpha n^\beta}{M^\alpha N^\beta}
-\right),
-\]
+Shparlinski (2014), *Multiple exponential and character sums with monomials*, studies additive characters over finite fields `F_p`; negative exponents there are interpreted via modular inversion. It is useful as a methodological comparison for multivariable monomial sums, but it is **not** a theorem directly applicable to the real phase above.
 
-which is exactly the functional class of the present Type-II phase with `alpha=beta=-1/2` at the formal level.
+Accordingly the direct literature match retained here is Baker–Weingartner's real bilinear-monomial framework. A theorem-level source for the exact real three-variable mean-square target has not yet been identified in the present search.
 
-There is also literature on multivariate exponential sums with monomials (for example Shparlinski) that is structurally relevant once the outer Voronoi n-average is retained.
-
-However, the present audit has not yet verified from the full theorem statements that:
-1. negative exponents `-1/2,-1/2` satisfy every nondegeneracy/range hypothesis used in the sharpest published estimates; and
-2. those estimates reach the exact critical target `ND^(1+epsilon)` uniformly in the parameter range `F=D/H`, `sqrt(D)<=F<=D`.
-
-Therefore no theorem is imported yet and no novelty is claimed.
+No novelty claim is made.
 
 Classification:
 
-`TYPEII_MONOMIAL_LITERATURE_MATCH_PENDING`.
+`REAL_THREE_VARIABLE_MONOMIAL_LITERATURE_OPEN`.
 
-## 8. Consequence
+## 9. Current consequence
 
-The small-d reciprocal-phase module has now advanced from one undifferentiated exponential-sum problem to:
+The reciprocal-phase branch is now split as follows:
 
-- **Type I:** closed at the required power by a direct first-derivative estimate;
-- **Type II:** the only live analytic core, with exact monomial factorization and a clearly specified three-variable mean-square target.
+- **Type I:** closed at the required power, with endpoint resonance handled separately;
+- **Type II two-variable pointwise:** known-style double-large-sieve estimates miss the critical power;
+- **Type II with outer n-average retained:** still OPEN and now the unique analytic core of this branch.
 
-This is materially narrower than the previous `unresolved high-d/low-n corner` formulation.
-
-Next audit priority:
-1. obtain the precise Baker--Weingartner theorem statement and test `alpha=beta=-1/2`, `F=D/H`;
-2. if its range or exponent misses the target, quantify the exact deficit;
-3. test whether the outer n-average upgrades the two-variable bound through multivariate monomial estimates;
-4. only if those standard tools fail should a new Type-II estimate be proposed.
+Next priority:
+1. search specifically for real three-variable monomial mean-value estimates with exponents `(1/2,-1/2,-1/2)`;
+2. derive a direct Cauchy/double-large-sieve bound for the full n,a,b mean square and quantify its exact deficit;
+3. test whether the exact rectangular factorization removes that deficit before introducing any new conjectural input.
