@@ -336,6 +336,40 @@
 - Limitation: workshop report, used only as a problem-status/severity guard, not as an analytic input theorem.
 - Audit verdict: `ACCEPT_FOR_FOUR_PRIME_FIXED_DETERMINANT_SEVERITY_GUARD`
 
+
+## S035 — Encyclopedia of Mathematics, Vaughan identity
+
+- Type: `STANDARD_REFERENCE`
+- Role: exact sign/support convention for the Vaughan decomposition used in the j=2 branch-coupling audit.
+- Formula used: for n>v,
+  [
+  Lambda(n)
+  =
+  sum_{dr=n, dle u}mu(d)log r
+  -
+  sum_{kr=n, kle uv}a(k)
+  -
+  sum_{ek=n, e>v, k>u}Lambda(e)b(k),
+  ]
+  with
+  [
+  b(k)=sum_{dmid k, dle u}mu(d).
+  ]
+- Critical audit use: confirms that the Type-II term is the negative k>H tail of the same factorable convolution obtained from the first two branches.
+- Audit verdict: `ACCEPT_FOR_EXACT_VAUGHAN_SIGN_AND_SUPPORT`
+- URL: https://encyclopediaofmath.org/wiki/Vaughan_identity
+
+## S036 — James Maynard, Primes in Arithmetic Progressions to Large Moduli II: Well-Factorable Estimates
+
+- Type: `PRIMARY_RESEARCH`
+- Journal: Memoirs of the American Mathematical Society
+- DOI: 10.1090/memo/1543
+- Role: comparison architecture for preserving factorability of sieve weights inside dispersion estimates rather than taking branchwise absolute values.
+- Reported result: mean-value estimates for primes in arithmetic progressions to moduli up to x^(3/5-epsilon) with suitably well-factorable weights.
+- Relevance here: motivates the current `J2_WELL_FACTORABLE_TAIL_DISPERSION_MAP` as an architecture comparison.
+- Limitation: arithmetic-progression geometry and theorem hypotheses differ from the present reciprocal monomial phase; no black-box transfer is claimed.
+- Audit verdict: `ACCEPT_FOR_WELL_FACTORABLE_DISPERSION_ARCHITECTURE_NOT_DIRECT_CLOSURE`
+
 ## Source-use rule
 
 어떤 자료도 `권위 있는 출처`라는 이유만으로 모든 종류의 주장에 사용하지 않는다. 범위, 정리, 계산기록, 최신성, 데이터 완전성은 서로 다른 검증축으로 관리한다.
