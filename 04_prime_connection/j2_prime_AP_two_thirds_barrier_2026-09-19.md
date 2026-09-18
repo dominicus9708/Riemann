@@ -115,3 +115,63 @@ These results make the dispersion route plausible, but the project has not yet d
 
 Permanent guard:
 `LATEST_KLOOSTERMAN_RESULT_REQUIRES_EXACT_PARAMETER_MAP`.
+
+
+## 6. Scope correction — L2 marginal is not blocked
+
+The generic modulus scale
+[
+D=P^{2/3}
+]
+remains beyond Bombieri--Vinogradov for a **pointwise/supremum residue-class treatment**.
+
+However the determinant-shell reduction supplies simultaneous averaging over moduli and residue classes.
+
+For a one-prime marginal, character Parseval followed by the ordinary dyadic character large sieve gives
+[
+sum_{basymp D}sum_{rmod b}^{*}|E_b(r)|^2
+ll_arepsilon
+rac{P+D^2}{D},P^{1+arepsilon}.
+]
+
+Since
+[
+D=P^{2/3}>sqrt P,
+]
+this becomes
+[
+oxed{
+sum_{basymp D}sum_r^{*}|E_b(r)|^2
+ll_arepsilon
+DP,P^arepsilon.
+}
+]
+
+At
+[
+D=H^2,qquad P=H^3,
+]
+the right-hand side is
+[
+DP=H^5=S.
+]
+
+The corresponding residue-multiplicity fluctuation with the real Möbius/divisor-bounded outer coefficient is also S-scale, because its character product collapses to a single length-(DH=P) Dirichlet polynomial before the same large sieve is applied.
+
+Therefore the original statement must be narrowed:
+
+[
+oxed{
+P^{2/3}	ext{ is a pointwise AP barrier, not an }L^2	ext{ marginal barrier.}
+}
+]
+
+The unresolved part is the connected two-prime covariance, where the two centered prime factors share the same unimodular short variables and cannot be separated into independent one-prime AP discrepancies.
+
+Classification update:
+- `J2_PRIME_AP_TWO_THIRDS_POINTWISE_BARRIER`;
+- `J2_ONE_PRIME_MARGINALS_LARGE_SIEVE_CLOSED`;
+- `J2_CONNECTED_UNIMODULAR_PRIME_PAIR_COVARIANCE_OPEN`.
+
+Permanent guard:
+`DO_NOT_IMPORT_POINTWISE_AP_BARRIER_INTO_FULL_L2_AVERAGE`.
