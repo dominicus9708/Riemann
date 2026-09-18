@@ -222,6 +222,57 @@
 - Critical audit use: primorial divisor complement `d <-> P_m/d`가 일반 Boolean complement duality의 산술 실현임을 판별하는 기준.
 - Audit verdict: `ACCEPT_FOR_COMPLEMENT_ALEXANDER_DUALITY`
 
+
+## S025 — Todd Cochrane & Zhiyong Shi (2010), The congruence x1 x2 ≡ x3 x4 (mod m) and mean values of character sums
+
+- Type: `PRIMARY_RESEARCH`
+- Journal: Journal of Number Theory 130(3) (2010), 767–785
+- Role: arbitrary-modulus product-congruence collision counts and fourth-moment character-sum control; used as an unweighted/support-level cross-check for ratio-residue multiplicity.
+- Critical audit use: for rectangular boxes, the centered product-congruence count has a square-root-of-box-volume error up to (m^{o(1)})-type factors, matching the natural (DH) scale in the j=2 support model.
+- Limitation: interval/indicator support theorem; it does not by itself handle the actual signed Möbius coefficient. The weighted project estimate is instead closed by character product-collapse plus the large sieve.
+- Audit verdict: `ACCEPT_FOR_UNWEIGHTED_PRODUCT_CONGRUENCE_CROSSCHECK`
+
+## S026 — Alexandru Pascadi (2025), Smooth numbers in arithmetic progressions to large moduli
+
+- Type: `PRIMARY_RESEARCH`
+- Journal: Compositio Mathematica 161(8) (2025), 1923–1974
+- DOI: 10.1112/S0010437X2500747X
+- Role: modern Linnik-dispersion / Poisson / Kloosterman template beyond the square-root modulus barrier.
+- Critical audit use: Remark 8.3 records that introducing the post-Poisson dual shift costs one full factor (H) under the trivial bound, motivating removal of bad index pairs before Poisson.
+- Relevance here: the current j=2 variance front independently has exactly one missing factor (H); therefore completion order and bad-pair elimination are compared against this proof architecture.
+- Limitation: smooth-number coefficients and parameter geometry differ from the present Möbius-weighted connected prime-pair covariance. No black-box transfer is allowed.
+- Audit verdict: `ACCEPT_FOR_DISPERSION_ARCHITECTURE_NOT_DIRECT_CLOSURE`
+
+## S027 — Zongkun Zheng (2025), Primes in simultaneous arithmetic progressions
+
+- Type: `PRIMARY_PREPRINT`
+- arXiv: 2512.22798
+- Role: mean-value distribution of primes constrained by two simultaneous arithmetic progressions, using spectral Kloosterman estimates and q-van der-Corput methods.
+- Critical audit use: comparison source for moving-residue / simultaneous-congruence structures that arise after the j=2 determinant-shell reduction.
+- Limitation: theorem hypotheses, factorable weights and parameter ranges must be matched exactly; it is not counted as a closure theorem for the unimodular connected covariance.
+- Audit verdict: `ACCEPT_FOR_SIMULTANEOUS_AP_COMPARISON_EXACT_MAP_REQUIRED`
+
+## S028 — Alexandru Pascadi (2026), Non-Abelian Amplification and Bilinear Forms with Kloosterman Sums
+
+- Type: `PRIMARY_RESEARCH`
+- Journal: Geometric and Functional Analysis 36 (2026), 1174–1243
+- DOI: 10.1007/s00039-026-00746-0
+- Role: bilinear Type-II Kloosterman sums for composite moduli via non-abelian Fourier analysis and amplification.
+- Reported scope: nontrivial bounds for essentially all composite moduli beyond the Pólya–Vinogradov range; at square-root summation length, products of two comparably-sized primes admit a (c^{-1/12}) saving.
+- Relevance here: candidate comparison theorem after a rigorous Vaughan/Heath–Brown and completion step produces an exact Kloosterman bilinear form.
+- Limitation: near-prime and modulus-factorization dependence is material. Do not transfer the saving before the exact transformed modulus and two sequence lengths are identified.
+- Audit verdict: `ACCEPT_AS_KLOOSTERMAN_INPUT_CANDIDATE_EXACT_PARAMETER_MAP_REQUIRED`
+
+## S029 — Valentin Blomer & Alexandru Pascadi (2026), Bilinear forms with Kloosterman sums via quadratic characters
+
+- Type: `PRIMARY_PREPRINT`
+- arXiv: 2607.24311
+- Role: new bilinear Kloosterman bounds valid for all moduli.
+- Reported critical-range result: when the summation length is the square root of the modulus, a (c^{-1/32}) saving over the trivial bound is obtained.
+- Relevance here: possible future input if the connected j=2 covariance is transformed into the exact fixed-modulus bilinear Kloosterman geometry of the theorem.
+- Limitation: the present project has not yet derived that exact transformed form. Any exponent comparison before parameter matching is only heuristic.
+- Audit verdict: `ACCEPT_AS_CURRENT_KLOOSTERMAN_BENCHMARK_EXACT_PARAMETER_MAP_REQUIRED`
+
 ## Source-use rule
 
 어떤 자료도 `권위 있는 출처`라는 이유만으로 모든 종류의 주장에 사용하지 않는다. 범위, 정리, 계산기록, 최신성, 데이터 완전성은 서로 다른 검증축으로 관리한다.
