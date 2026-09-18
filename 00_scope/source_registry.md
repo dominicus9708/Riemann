@@ -273,6 +273,69 @@
 - Limitation: the present project has not yet derived that exact transformed form. Any exponent comparison before parameter matching is only heuristic.
 - Audit verdict: `ACCEPT_AS_CURRENT_KLOOSTERMAN_BENCHMARK_EXACT_PARAMETER_MAP_REQUIRED`
 
+
+## S030 — Rachita Guria (2024), An asymptotic formula with power-saving error term for counting prime solutions to a binary additive problem
+
+- Type: `PRIMARY_RESEARCH`
+- Preprint: arXiv:2410.10856
+- Role: the closest direct determinant-equation prior art to the current j=2 connected shell.
+- Main theorem used for audit: for (ad-pb=r), one arbitrary coefficient (alpha(a)=O(a^arepsilon)), one prime variable (p), and the other two variables unrestricted/smoothed, Guria obtains an asymptotic with error
+  [
+  O_arepsilon!left(X^{7/4+arepsilon}+|r|^{1/5}X^{31/20+arepsilon}ight).
+  ]
+  Choosing the arbitrary coefficient as a prime indicator gives a two-prime determinant count with the same power-saving error.
+- Method: smooth the unrestricted variables, Poisson summation, then average Kloosterman fractions over the prime variable.
+- Critical limitation for this project: our sharp j=2 shell has **two** small arithmetic coefficients (Möbius/prime-like) and **two** large prime variables, with anisotropic lengths (H^2,H^2,H^3,H^3). Guria's theorem does not provide this four-arithmetic-variable weighted estimate as a black box.
+- Audit verdict: `ACCEPT_AS_CLOSEST_DETERMINANT_POSITIVE_CONTROL_NOT_DIRECT_CLOSURE`
+- URL: https://arxiv.org/abs/2410.10856
+
+## S031 — Natalie Evans (2022/2023), Correlations of almost primes
+
+- Type: `PRIMARY_RESEARCH`
+- Journal: Mathematical Proceedings of the Cambridge Philosophical Society 174(2), 301–344
+- DOI: 10.1017/S0305004122000251
+- Role: direct comparison for correlations (n,n+h) when both are products of two primes.
+- Main relevant facts:
+  - restricted-factor (E_2') correlations admit Hardy–Littlewood-type asymptotics for almost all shifts down to polylogarithmic (H);
+  - general (E_2)-(E_2) correlations admit such asymptotics for almost all (|h|le H) when (Hge exp((log X)^{1-arepsilon})).
+- Relevance: our (S=H_0^5), shift length (H_0=S^{1/5}) lies comfortably inside the general theorem's shift range.
+- Critical limitation: an almost-all-shift asymptotic with logarithmic exceptional/error savings does not by itself imply the project’s normalized centered aggregate target (O(S)), which requires recovering a full polynomial factor (H_0^{-1}) from a raw (H_0S) scale.
+- Audit verdict: `ACCEPT_FOR_E2_CORRELATION_COMPARISON_NOT_VARIANCE_CLOSURE`
+- URL: https://doi.org/10.1017/S0305004122000251
+
+## S032 — A. J. Irving (2014), Average Bounds for Kloosterman Sums Over Primes
+
+- Type: `PRIMARY_RESEARCH`
+- Role: prime Kloosterman-fraction estimate used by Guria after Poisson summation.
+- Relevant bound:
+  [
+  sum_{qsim Q}left|sum_{substack{ple X\(p,q)=1}}e(aar p/q)ight|
+  ll_arepsilon
+  left(1+rac{a}{XQ}ight)^{1/2}
+  left(Q^{1/2}X^{11/8}+Q^{7/6}X^{2/3}ight)(aQ)^arepsilon
+  ]
+  in the stated range (Q^{4/3}ge Xge Q^{1/2}).
+- Audit verdict: `ACCEPT_FOR_PRIME_KLOOSTERMAN_FRACTION_BENCHMARK`
+- URL: https://arxiv.org/abs/1301.6372
+
+## S033 — Sandro Bettin & Vorrapan Chandee (2018), Trilinear forms with Kloosterman fractions
+
+- Type: `PRIMARY_RESEARCH`
+- Journal: Advances in Mathematics 328 (2018), 1234–1262
+- DOI: 10.1016/j.aim.2018.01.026
+- Role: arbitrary-coefficient trilinear Kloosterman-fraction benchmark and determinant-equation application.
+- Critical audit use: supplies a permissive black-box benchmark after a hypothetical legal smoothing/Poisson step. It does not automatically handle two Möbius-weighted small variables and two prime variables simultaneously.
+- Audit verdict: `ACCEPT_FOR_GENERIC_FRACTION_BENCHMARK_NOT_DIRECT_CLOSURE`
+
+## S034 — Amos Nevo (2008), On matrices with (almost) prime entries, lattice points and ergodic theorems
+
+- Type: `RESEARCH_WORKSHOP_NOTE`
+- Role: severity guard for fixed-determinant all-prime (2	imes2) matrix problems.
+- Reported status: infinitude of (2	imes2) prime-entry matrices of determinant 2 is posed as open; the note compares it with twin-prime-type difficulty.
+- Critical audit use: if a proposed j=2 reduction silently demands a pointwise theorem for four prime entries at fixed determinant, classify that route as stronger than the intended averaged centered problem rather than treating it as routine.
+- Limitation: workshop report, used only as a problem-status/severity guard, not as an analytic input theorem.
+- Audit verdict: `ACCEPT_FOR_FOUR_PRIME_FIXED_DETERMINANT_SEVERITY_GUARD`
+
 ## Source-use rule
 
 어떤 자료도 `권위 있는 출처`라는 이유만으로 모든 종류의 주장에 사용하지 않는다. 범위, 정리, 계산기록, 최신성, 데이터 완전성은 서로 다른 검증축으로 관리한다.
