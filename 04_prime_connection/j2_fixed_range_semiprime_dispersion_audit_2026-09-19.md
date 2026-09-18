@@ -247,7 +247,30 @@ HS^{1+arepsilon}.
 
 Here (mathfrak M) is the local density/singular main term consistent with the smooth cell mean already separated in the common reduction.
 
-This is the current (j=2) residual theorem target.
+### Normalization correction
+
+For a normalized triangular/smooth shift weight (W(h/H)=O(1)), the Selberg-integral expansion has one additional outer factor (H):
+[
+J_a(S,H)
+=
+H
+sum_{|h|lesssim H}W(h/H)mathcal R(h)
++
+O(\text{boundary/smoothing}).
+]
+
+Hence (J_a(S,H)\ll HS^{1+\varepsilon}) corresponds to the normalized shift aggregate target
+[
+mathcal D\ll S^{1+\varepsilon},
+]
+not (HS^{1+\varepsilon}).
+
+At the sharp endpoint (H=V^{1/2}), (S=V^{5/2}), the residual must therefore save one full factor (H^{-1}=V^{-1/2}) at the variance level. After taking the square root in the original DLS estimate, this is exactly the missing (H^{-1/2}=V^{-1/4}).
+
+Permanent guard:
+`NORMALIZED_SHIFT_TARGET_IS_S_NOT_HS`.
+
+This is the corrected current (j=2) residual theorem target.
 
 ## 9. Interpretation
 
