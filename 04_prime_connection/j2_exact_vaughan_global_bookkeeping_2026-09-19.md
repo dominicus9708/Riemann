@@ -423,3 +423,41 @@ rather than returning to the full original prime-q sum.
 
 Permanent priority:
 `J2_CENTRAL_VAUGHAN_TYPEII_H1_4_FIRST`.
+
+
+## 10. Support-aware correction — the H^(1/4) branch is not the final frontier
+
+The preceding table treats Vaughan branches separately.
+
+A later exact support audit of
+[
+b_H(k)=sum_{substack{dmid k\dle H}}mu(d)
+]
+shows:
+
+- if (H<k<H^2) is composite and has a prime factor (>H), then (b_H(k)=0);
+- hence every nonzero composite Type-II coefficient is supported on (H)-smooth k;
+- the prime-k rough subfamily is precisely the branch which cancels against the first-Type-I unit term on rough semiprimes;
+- proper prime powers in the e-variable are sparse enough to close by standard DLS;
+- the remaining smooth-composite k admits a divisor partition reducing the product-balance discrepancy to at most (1/3) in H-exponent.
+
+Therefore the support-aware composite Type-II bound is
+[
+oxed{
+H^{6+1/6+arepsilon},
+}
+]
+not (H^{6+1/4+arepsilon}).
+
+The corrected global branchwise frontier is now
+[
+oxed{H^{1/6}.}
+]
+
+The H^(1/4) estimate remains valid as a **branch-separated generic DLS bound**, but it is superseded after exact support/inter-branch structure is used.
+
+See:
+`j2_vaughan_typeII_support_collapse_h16_2026-09-19.md`.
+
+Permanent correction:
+`J2_H1_4_FRONTIER_SUPERSEDED_BY_SUPPORT_AWARE_H1_6`.
