@@ -314,3 +314,162 @@ Apply a prime decomposition while keeping a,b,k distinct, derive the first exact
 variance-level gain.
 
 The next checkpoint is not whether a Kloosterman theorem gives any power saving, but whether its exact transformed parameter range supplies the full missing H.
+
+
+## 11. Unimodular two-linear-form structure
+
+With
+[
+t_{a,b}:=rac{aar a-1}{b},
+]
+the exact parametrization can be written
+[
+inom{p}{p'}
+=
+M_{a,b}
+inom{ell}{k},
+qquad
+M_{a,b}
+=
+egin{pmatrix}
+b & ar a\
+a & t_{a,b}
+end{pmatrix}.
+]
+
+But
+[
+det M_{a,b}
+=
+b,t_{a,b}-aar a
+=
+(aar a-1)-aar a
+=
+-1.
+]
+
+Hence
+[
+oxed{M_{a,b}in GL_2(mathbb Z),qquad det M_{a,b}=-1.}
+]
+
+The inverse is integral:
+[
+inom{ell}{k}
+=
+egin{pmatrix}
+-t_{a,b} & ar a\
+a & -b
+end{pmatrix}
+inom{p}{p'}.
+]
+
+Thus the pair of prime linear forms is an exact unimodular coordinate change, not merely two unrelated congruence conditions.
+
+Classification:
+`J2_UNIMODULAR_LINEAR_FORM_PAIR`.
+
+## 12. Exact local-density cancellation
+
+For every prime r, the matrix (M_{a,b}) is invertible modulo r because its determinant is (-1).
+
+Therefore
+[
+(ell,k)pmod r
+longmapsto
+(p,p')pmod r
+]
+is a bijection.
+
+Among the (r^2) residue pairs, exactly
+[
+(r-1)^2
+]
+have both (p
+otequiv0pmod r) and (p'
+otequiv0pmod r).
+
+The local survival density is therefore
+[
+rac{(r-1)^2}{r^2}
+=
+left(1-rac1right)^2.
+]
+
+After normalization by the independent-prime baseline, every local factor is exactly
+[
+oxed{1}.
+]
+
+Hence the primitive determinant shell has no nontrivial Hardy--Littlewood singular-series factor:
+[
+oxed{mathfrak S(M_{a,b})=1.}
+]
+
+This does not solve the parity/cancellation problem, but it removes a major bookkeeping complication: the centered main term is universal in the coprime shell rather than depending on a,b through local congruence obstructions.
+
+Permanent rule:
+`UNIMODULAR_LOCAL_SINGULAR_SERIES_IS_ONE`.
+
+## 13. Near-cusp geometry
+
+The entries of (M_{a,b}) are (O(D)), while its determinant has absolute value one.
+
+Thus its singular values satisfy
+[
+sigma_{max}asymp D,
+qquad
+sigma_{min}asymp D^{-1},
+]
+up to dyadic constants in the sharp generic range.
+
+The condition number is therefore
+[
+kappa(M_{a,b})asymp D^2=H^4=X.
+]
+
+An (H	imes H) box in ((ell,k))-coordinates is mapped to a very thin prime-pair parallelogram with principal scales
+[
+H D=P
+qquad	ext{and}qquad
+H/D=H^{-1},
+]
+and area exactly
+[
+H^2.
+]
+
+So the Farey criticality has an equivalent linear-algebraic description:
+[
+oxed{	ext{the residual is an average over near-cusp unimodular frames.}}
+]
+
+The long axis spans the full prime scale P, while the transverse width is sub-unit. This explains why ordinary two-dimensional density estimates do not automatically produce the required H-saving.
+
+## 14. Refined centered target
+
+Using von Mangoldt weights, the expected main mass per unimodular H x H short box is of order
+[
+H^2.
+]
+
+There are schematically
+[
+H^4
+]
+admissible (a,b)-frames.
+
+The raw aggregate is therefore (H^6), while the corrected centered target is (H^5).
+
+Equivalently, the desired common estimate asks for average error of square-root size
+[
+oxed{O(H)}
+]
+per H x H short box, after the universal local main term is removed.
+
+This is a cleaner formulation of the missing factor:
+[
+oxed{	ext{average square-root discrepancy for prime pairs in near-cusp unimodular frames}.}
+]
+
+The next dispersion calculation should be tested against this formulation.
