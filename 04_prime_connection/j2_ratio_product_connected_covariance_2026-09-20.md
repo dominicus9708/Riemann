@@ -399,3 +399,211 @@ Priority:
 2. compute the exact second moment of the resulting ratio-semiprime correlation over \(e\);
 3. compare that second moment with the \(P^{1/3}\) coherence deficit;
 4. terminate any route that reduces to separate \(L^2\) norms or generic Hölder.
+
+
+## 11. Distinguished-prime Cauchy audit
+
+Let
+\[
+Q=R^\circ*S^\circ,
+\qquad
+C=H_-^\circ*\widetilde B^\circ.
+\]
+
+Then
+\[
+A^\circ=E^\circ*Q
+\]
+and
+\[
+\langle A^\circ,C\rangle
+=
+\sum_{e\in G}E^\circ(e)D(e),
+\]
+where
+\[
+D(e)
+=
+\sum_{x\in G}
+Q(xe^{-1})\overline{C(x)}.
+\]
+
+Because \(Q\) is mean-zero,
+\[
+\sum_{e\in G}D(e)=0.
+\]
+Hence the uniform part of \(E^\circ\) disappears exactly, and one may write the same first moment using the actual distinguished-prime weight.
+
+For a prime/von-Mangoldt block of length
+\[
+P^{1/2},
+\]
+one has
+\[
+\sum_e|E(e)|^2
+\ll
+P^{1/2+o(1)}.
+\]
+
+Therefore Cauchy would close the covariance target only if
+\[
+\boxed{
+\sum_{e\asymp P^{1/2}\atop e\ {m prime}}
+|D(e)|^2
+\ll
+P^{5/6+o(1)}.
+}
+\]
+
+This is substantially stronger than a generic localized-energy statement.
+
+Indeed,
+\[
+\|Q\|_2^2\asymp P^{1/2+o(1)},
+\qquad
+\|C\|_2^2\asymp P^{1+o(1)}.
+\]
+
+A random-shift model therefore predicts
+\[
+|D(e)|^2
+\asymp
+\frac{\|Q\|_2^2\|C\|_2^2}{P}
+\asymp
+P^{1/2+o(1)}.
+\]
+
+Across \(P^{1/2+o(1)}\) prime locations this gives natural energy
+\[
+P^{1+o(1)},
+\]
+whereas Cauchy closure asks for
+\[
+P^{5/6+o(1)}.
+\]
+
+Thus a distinguished-prime second-moment route requires an additional non-generic depletion
+\[
+\boxed{P^{-1/6}}
+\]
+relative even to the random localized-energy scale.
+
+Conclusion:
+generic second-moment/Cauchy on the distinguished prime is too strong as the next target unless one proves a special anticorrelation between prime support and the ratio-semiprime correlation.
+
+Classification:
+J2_DISTINGUISHED_PRIME_GENERIC_SECOND_MOMENT_OVERSTRONG.
+
+Permanent guard:
+DO_NOT_SQUARE_DISTINGUISHED_PRIME_BEFORE_USING_ITS_ARITHMETIC_STRUCTURE.
+
+## 12. Exact near-multiple restricted-convolution representation
+
+The congruence
+\[
+bers\equiv-h\pmod P
+\]
+is equivalent, on the hard ranges, to the integer equation
+\[
+\boxed{
+bers+h=\ell P
+}
+\]
+with
+\[
+\ell\asymp P^{2/3}.
+\]
+
+Define the restricted four-factor Dirichlet-convolution coefficient
+\[
+a(N)
+=
+\sum_{\substack{
+bers=N\\
+b\asymp P^{2/3},\ e\asymp P^{1/2}\\
+r,s\asymp P^{1/4}
+}}
+\alpha_b\beta_e\rho_r\sigma_s.
+\]
+
+Then the non-main arithmetic count is exactly a short-residue-window sample
+\[
+\boxed{
+\sum_{\ell\asymp P^{2/3}}
+\sum_{|h|\lesssim P^{1/3}}
+\eta_h\,
+a(\ell P-h),
+}
+\]
+with the appropriate local-density subtraction.
+
+This formulation changes no character orientation and does not use the withdrawn
+\[
+bh-ers=mP
+\]
+shell.
+
+It converts the modular problem into the distribution of a restricted factorable convolution along integers immediately adjacent to multiples of \(P\).
+
+## 13. Scale map to divisor-in-arithmetic-progression theory
+
+Set
+\[
+X=P^{5/3}.
+\]
+
+Then
+\[
+P=X^{3/5},
+\qquad
+b\asymp X^{2/5},
+\qquad
+e\asymp X^{3/10},
+\qquad
+r,s\asymp X^{3/20},
+\]
+and
+\[
+\ell\asymp X^{2/5},
+\qquad
+h\asymp X^{1/5}.
+\]
+
+Thus the current exact hard core is a prime-modulus arithmetic-progression problem at exponent
+\[
+\boxed{3/5}
+\]
+for a highly factorable, restricted four-fold coefficient, averaged over a consecutive residue window of length
+\[
+X^{1/5}.
+\]
+
+A useful two-product grouping is
+\[
+u=br\asymp X^{11/20},
+\qquad
+v=es\asymp X^{9/20},
+\qquad
+uv\asymp X.
+\]
+
+This is only \(1/20\) away from exact square-root balance on each side.
+
+### Literature comparison
+
+- The classical binary divisor problem admits uniform prime-modulus distribution substantially into the range below \(X^{2/3}\), so the modulus exponent \(3/5\) is not intrinsically beyond binary-divisor geometry.
+- Fouvry--Kowalski--Michel prove an exponent of distribution \(1/2+1/46\) for \(d_3\) to prime moduli; Sharma improves the corresponding exponent to \(1/2+1/30\). Both remain below \(3/5\).
+- General \(d_k\), \(k\ge4\), results beyond square-root often use smooth/factorable moduli or averaging over moduli. They do not directly apply to the present single prime modulus \(P\).
+- Therefore treating the coefficient merely as a generic ternary/quaternary divisor function loses too much structure.
+- The potentially useful feature is instead the near-balanced binary grouping
+  \[
+  X^{11/20}\times X^{9/20}
+  \]
+  together with the original prime/Möbius factorization retained inside each side and the short residue-window average.
+
+No closure is claimed.
+
+New priority:
+J2_NEAR_MULTIPLE_RESTRICTED_CONVOLUTION_AP_ROUTE.
+
+The next theorem search should ask for a coefficient-sensitive binary/Type-II distribution estimate at modulus \(X^{3/5}\) that also gains from the \(X^{1/5}\)-long consecutive residue window, rather than applying generic \(d_3\) or \(d_4\) distribution black boxes.
