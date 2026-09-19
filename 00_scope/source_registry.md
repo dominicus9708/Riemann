@@ -391,6 +391,28 @@
 - Audit verdict: \`ACCEPT_FOR_GENERIC_3D_ARITHMETIC_COEFFICIENT_BENCHMARK_NOT_CLOSURE\`
 - URL: https://doi.org/10.1515/CRELLE.2006.012
 
+
+## S038 — Kowalski, Michel & Sawin, Bilinear forms with Kloosterman sums and applications / stratification follow-up
+
+- Type: \`PRIMARY_RESEARCH\`
+- 2017 Annals paper: *Bilinear forms with Kloosterman sums and applications*, Ann. of Math. 186(2), 413–500.
+- Follow-up: *Stratification and averaging for exponential sums: bilinear forms with generalized Kloosterman sums*, arXiv:1802.09849, latest revision 2025.
+- Role: bilinear bounds for normalized hyper-Kloosterman trace functions modulo a prime.
+- Exact project map: simultaneous completion of
+  \[
+  e_p(A\overline{mn})
+  \]
+  in two smooth variables produces
+  \[
+  \mathrm{Kl}_3(Ah_1h_2;p).
+  \]
+- Critical benchmark: for square-root lengths, the explicit older KMS estimate gives a prime-modulus saving of order \(p^{-1/64}\); the later stratification theorem gives a nontrivial power saving throughout \(MN\ge p^{3/4+\delta}\), including \(M=N=\sqrt p\), but the theorem statement used here does not supply a verified exponent large enough to close the required j=2 H^(-1/8) residual.
+- Guards:
+  - modulus must remain prime;
+  - completion variables must be genuinely smooth;
+  - nontrivial power saving is not automatically quantitatively sufficient.
+- Audit verdict: \`ACCEPT_FOR_HYPERKLOOSTERMAN_FUNCTIONAL_CLASS_AND_POWER_SAVING_BENCHMARK_NOT_CLOSURE\`
+
 ## Source-use rule
 
 어떤 자료도 `권위 있는 출처`라는 이유만으로 모든 종류의 주장에 사용하지 않는다. 범위, 정리, 계산기록, 최신성, 데이터 완전성은 서로 다른 검증축으로 관리한다.
