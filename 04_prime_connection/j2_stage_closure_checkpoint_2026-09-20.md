@@ -348,3 +348,83 @@ The first next audit should compare this exact weighted shell with:
 3. a direct dispersion proof exploiting the absent integer diagonal.
 
 This file is the canonical j=2 checkpoint for continuation after 2026-09-20.
+
+
+# CANONICAL CORRECTION — 2026-09-20
+
+The parts of this checkpoint that promote
+\[
+bh-ers=mP
+\]
+to the exact j=2 frontier are superseded.
+
+The error arose from taking the legal Cauchy grouping
+\[
+|BH|\cdot|EK|
+\]
+and then treating it as if the original character moment were
+\[
+BH\,\overline{EK}.
+\]
+The original character orientations are instead
+\[
+B E K\overline H.
+\]
+
+Hence the exact orthogonality condition remains
+\[
+\boxed{b e k\equiv -h\pmod P},
+\]
+not \(bh\equiv ek\pmod P\).
+
+With
+\[
+k=rs,
+\]
+the valid arithmetic frontier is
+\[
+\boxed{b e r s\equiv -h\pmod P},
+\]
+where
+\[
+b\asymp P^{2/3},\quad
+e\asymp P^{1/2},\quad
+r,s\asymp P^{1/4},\quad
+h\asymp P^{1/3}.
+\]
+
+The valid character target is
+\[
+\boxed{
+\sum_{\chi\ne\chi_0}
+B(\chi)E(\chi)R(\chi)S(\chi)\overline{H(\chi)}
+\ll P^{5/3+o(1)}.
+}
+\]
+
+Generic Cauchy still gives a numerator of scale
+\[
+P^{2+o(1)},
+\]
+so the exact missing saving remains
+\[
+\boxed{P^{-1/3}=H^{-1}}.
+\]
+
+Withdrawn:
+- bounded nonzero wrap-shell frontier;
+- absent cross integer diagonal as a saving mechanism;
+- shifted-divisor and determinant-theorem maps that relied on that artificial shell.
+
+Still valid:
+- two-small-factor support localization \(k=rs\);
+- exact inverse congruence;
+- structured four/five-factor character moment;
+- generic H-deficit;
+- all earlier Vaughan support, low-Type-I, H^(1/10), and H^(1/8) branchwise results.
+
+New canonical starting point:
+J2_STRUCTURED_FIVE_FACTOR_CHARACTER_MOMENT.
+
+Permanent guard:
+DO_NOT_APPLY_ORTHOGONALITY_AFTER_CHANGING_CONJUGATION_BY_CAUCHY.
