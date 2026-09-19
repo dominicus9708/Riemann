@@ -307,3 +307,68 @@ A theorem of this form would supply exactly the missing \(H^{-1}\) variance savi
 
 Permanent priority:
 J2_CROSS_FACTORIZATION_WRAP_SHELL_DISPERSION.
+
+
+# SUPERSEDED / INVALID REDUCTION — audit correction 2026-09-20
+
+The reduction in this file from the exact character moment to
+\[
+bh\equiv ers\pmod P
+\]
+and hence to bounded wrap shells
+\[
+bh-ers=mP
+\]
+is **not valid** for the original j=2 character moment.
+
+The exact character expression is
+\[
+\mathcal A_P
+=
+\frac1{P-1}
+\sum_{\chi\ne\chi_0}
+B(\chi)E(\chi)K(\chi)\overline{H(\chi)},
+\]
+which expands by character orthogonality to
+\[
+\boxed{b e k\equiv -h\pmod P}
+\]
+(up to the harmless sign convention in the shift variable).
+
+The grouping
+\[
+|BH|\cdot|EK|
+\]
+is legal only as a Cauchy--Schwarz norm grouping. It does not convert the exact character sum into
+\[
+\sum_\chi B(\chi)H(\chi)\overline{E(\chi)K(\chi)}.
+\]
+
+Therefore orthogonality may not be applied to that artificial grouping to infer
+\[
+bh\equiv ek\pmod P.
+\]
+
+Withdrawn as j=2 claims:
+- CROSS_FACTORIZATION_INTEGER_DIAGONAL_EMPTY;
+- J2_NONZERO_WRAP_SHELL_REDUCTION;
+- J2_CROSS_FACTORIZATION_WRAP_SHELL_DISPERSION;
+- literature maps based specifically on \(bh-ers=mP\).
+
+The valid frontier returns to
+\[
+\boxed{b e r s\equiv -h\pmod P}
+\]
+and equivalently
+\[
+\boxed{
+\mathcal A_P
+=
+\frac1{P-1}
+\sum_{\chi\ne\chi_0}
+B(\chi)E(\chi)R(\chi)S(\chi)\overline{H(\chi)}.
+}
+\]
+
+Permanent guard:
+CAUCHY_NORM_GROUPING_DOES_NOT_CHANGE_CHARACTER_ORIENTATION.
