@@ -262,3 +262,37 @@ This is a **signed multiscale spacing problem**, not an unsigned subset-partitio
 
 Classification:
 `J2_SIGNED_MULTISCALE_VAUGHAN_SPACING_OPEN`.
+
+
+## 9. Analytic-scope correction — pointwise cancellation is not a restricted-subfamily bound
+
+The exact coefficient identities in this file are correct.
+
+However one must distinguish:
+
+\[
+\boxed{
+\text{pointwise coefficient cancellation}
+}
+\]
+from
+\[
+\boxed{
+\text{an analytic bound for one restricted factor-pattern subfamily}.
+}
+\]
+
+For example, restricting the first-Type-I partner to integers of the form
+\[
+q=Prs
+\]
+attaches an arithmetic factor-pattern indicator to the variable which was unrestricted/smooth in the proved low-Type-I B-process estimate.
+
+Therefore the already-proved bound for the **full** first-Type-I branch does not automatically imply the same bound for that restricted subfamily.
+
+The cancellation remains valuable because it shows that the isolated H^(1/6) or H^(1/8) witness is not an intrinsic lower barrier.
+
+But converting it into an upper bound requires a norm/transform which preserves the signed recombination without destroying the smooth-variable structure.
+
+Permanent guard:
+\`POINTWISE_VAUGHAN_CANCELLATION_NE_RESTRICTED_SUBFAMILY_BOUND\`.
