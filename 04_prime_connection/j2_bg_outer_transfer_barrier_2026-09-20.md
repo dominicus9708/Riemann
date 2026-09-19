@@ -291,3 +291,39 @@ Candidate forms:
 
 Permanent priority:
 \`J2_MOBIUS_TIMES_INVERSE_PRODUCT_COUPLED_ESTIMATE\`.
+
+
+## 9. Correction after amplitude/variance normalization audit
+
+The comparison in Sections 5 and 8 used an obsolete interpretation in which the Bourgain--Garaev \(p^{-1/16}\) saving was credited directly against the amplitude-side \(H^{-1/8}\) deficit.
+
+The inverse-product congruence lives on the variance/dispersion side.
+
+The correct refined variance deficit corresponding to the amplitude factor \(H^{1/8}\) is
+\[
+H^{1/4}=p^{1/12}.
+\]
+
+Thus even before paying any outer-coefficient transfer cost, the BG saving leaves
+\[
+p^{1/12}p^{-1/16}
+=
+\boxed{p^{1/48}=H^{1/16}}.
+\]
+
+Accordingly:
+- there is no spare \(p^{-1/48}\) margin;
+- instead there is an additional \(p^{-1/48}\) saving still required;
+- the generic outer character/Fourier transfer cost \(p^{1/6}\) remains far too large and therefore the barrier conclusion of this file becomes even stronger.
+
+Replace the old phrase “BG margin cannot pay generic outer transfer” by the sharper statement:
+
+\[
+\boxed{
+\text{BG itself does not fully close the refined variance residual,
+and generic outer transfer worsens the gap by }p^{1/6}.
+}
+\]
+
+Updated classification:
+BG_LEAVES_P1_48_BEFORE_OUTER_TRANSFER.
