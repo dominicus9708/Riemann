@@ -592,7 +592,7 @@ This is only \(1/20\) away from exact square-root balance on each side.
 ### Literature comparison
 
 - The classical binary divisor problem admits uniform prime-modulus distribution substantially into the range below \(X^{2/3}\), so the modulus exponent \(3/5\) is not intrinsically beyond binary-divisor geometry.
-- Fouvry--Kowalski--Michel prove an exponent of distribution \(1/2+1/46\) for \(d_3\) to prime moduli; Sharma improves the corresponding exponent to \(1/2+1/30\). Both remain below \(3/5\).
+- For pointwise/uniform ternary-divisor distribution, Fouvry--Kowalski--Michel prove exponent \(1/2+1/46\), and Sharma improves this to \(1/2+1/30\), both below \(3/5\). A 2026 result of Aydemir--Boran reaches \(8/11\) **after averaging over reduced residue classes modulo a prime**. That averaging regime is different from the present consecutive window of length \(X^{1/5}\), so it is not used as a black-box closure.
 - General \(d_k\), \(k\ge4\), results beyond square-root often use smooth/factorable moduli or averaging over moduli. They do not directly apply to the present single prime modulus \(P\).
 - Therefore treating the coefficient merely as a generic ternary/quaternary divisor function loses too much structure.
 - The potentially useful feature is instead the near-balanced binary grouping
@@ -607,3 +607,197 @@ New priority:
 J2_NEAR_MULTIPLE_RESTRICTED_CONVOLUTION_AP_ROUTE.
 
 The next theorem search should ask for a coefficient-sensitive binary/Type-II distribution estimate at modulus \(X^{3/5}\) that also gains from the \(X^{1/5}\)-long consecutive residue window, rather than applying generic \(d_3\) or \(d_4\) distribution black boxes.
+
+
+## 14. Smooth binary comparison model: exact dual Kloosterman scale
+
+This section is a **comparison model**, not yet a legal transformation of the actual arithmetic weights.
+
+Group
+\[
+u=br,
+\qquad
+v=es.
+\]
+
+Then
+\[
+U\asymp P^{11/12},
+\qquad
+V\asymp P^{3/4},
+\qquad
+UV\asymp P^{5/3}=X.
+\]
+
+Temporarily replace the arithmetic convolution coefficients on \(u,v\) by smooth dyadic weights.
+
+For
+\[
+uv\equiv-h\pmod P,
+\]
+two-dimensional Poisson summation separates the zero frequency from a nonzero dual Kloosterman core of the schematic form
+\[
+\frac{UV}{P^2}
+\sum_{m,n}
+\widehat W_1\!\left(\frac{mU}{P}\right)
+\widehat W_2\!\left(\frac{nV}{P}\right)
+S(\pm h,mn;P).
+\]
+
+Writing the classical Kloosterman sum in normalized form
+\[
+\mathrm{Kl}_2(a;P)=P^{-1/2}S(a,1;P)
+\]
+and absorbing harmless inversions/signs, the centered nondegenerate core has prefactor
+\[
+\boxed{
+\frac{UV}{P^{3/2}}
+=
+P^{1/6}.
+}
+\]
+
+The dual lengths are
+\[
+M=\frac PU=P^{1/12},
+\qquad
+N=\frac PV=P^{1/4}.
+\]
+
+The short residue window has length
+\[
+H=P^{1/3}.
+\]
+
+Hence the exact scale coincidence is
+\[
+\boxed{
+MN=P^{1/3}=H.
+}
+\]
+
+This is the strongest structural feature of the smooth binary comparison model.
+
+Classification:
+J2_SMOOTH_BINARY_DUAL_LENGTH_MATCH_MN_EQ_H.
+
+## 15. Exact Kloosterman saving demanded by the comparison model
+
+After summing the centered discrepancy over the short \(h\)-window, the nondegenerate comparison core is
+\[
+P^{1/6}
+\sum_{h\asymp P^{1/3}}
+\sum_{m\asymp P^{1/12}}
+\sum_{n\asymp P^{1/4}}
+\gamma_h\alpha_m\beta_n
+\mathrm{Kl}_2(\pm hmn;P),
+\]
+up to smooth weights and dyadic decomposition.
+
+The desired arithmetic target is
+\[
+P^{2/3+o(1)}.
+\]
+
+Therefore it would suffice to prove
+\[
+\boxed{
+\sum_{h\asymp P^{1/3}}
+\sum_{m\asymp P^{1/12}}
+\sum_{n\asymp P^{1/4}}
+\gamma_h\alpha_m\beta_n
+\mathrm{Kl}_2(\pm hmn;P)
+\ll
+P^{1/2+o(1)}.
+}
+\]
+
+There are
+\[
+P^{1/3+1/12+1/4}
+=
+P^{2/3}
+\]
+terms.
+
+Thus the exact required saving over bounded normalized Kloosterman sums is
+\[
+\boxed{P^{-1/6}.}
+\]
+
+Equivalently, because
+\[
+H=P^{1/3},
+\]
+the comparison model asks for
+\[
+\boxed{H^{-1/2}}
+\]
+of cancellation.
+
+Classification:
+J2_DUAL_TRILINEAR_KL2_P16_SAVING_TARGET.
+
+## 16. Why a generic bilinear collapse is not presently a black-box closure
+
+If the dual variables \(m,n\) are collapsed to
+\[
+k=mn\asymp P^{1/3},
+\]
+the comparison sum becomes bilinear in
+\[
+h\asymp P^{1/3},
+\qquad
+k\asymp P^{1/3}.
+\]
+
+The Kowalski--Michel--Sawin 2018 generalized-Kloosterman benchmark is nontrivial for two equal lengths from
+\[
+P^{3/8+\delta}
+\]
+onward.
+
+Thus the symmetric
+\[
+P^{1/3}\times P^{1/3}
+\]
+box lies below that general threshold.
+
+Recent 2026 Blomer--Pascadi bounds improve the critical square-root-length saving, but their abstract-level critical regime is not the present \(P^{1/3}\times P^{1/3}\) box.
+
+Therefore no black-box closure is recorded from these theorems.
+
+This does **not** prove that the target is impossible with known methods. It shows that the internal factorization
+\[
+P^{1/12}\times P^{1/4}
+\]
+must be retained until an exact theorem parameter map is established.
+
+Permanent rule:
+DO_NOT_COLLAPSE_DUAL_P112_P14_BEFORE_KLOOSTERMAN_AUDIT.
+
+## 17. Consecutive-residue divisor literature is structurally aligned
+
+Kerr--Shparlinski study the binary divisor function averaged over sets of consecutive reduced residue classes and use Voronoi/Kloosterman bilinear methods. Their motivation is precisely to gain from residue-class averaging beyond the individual-residue regime.
+
+This is structurally close to the present
+\[
+|h|\lesssim X^{1/5}
+\]
+consecutive residue window.
+
+However the present coefficient is not \(d_2\). It is a restricted signed convolution whose two grouped sides still contain:
+- the inherited outer Möbius/divisor coefficient;
+- one distinguished prime;
+- the two-prime boundary coefficient.
+
+Hence the divisor result is used as a transformation template, not as a theorem already proving the j=2 estimate.
+
+New direct priority:
+J2_FACTORABLE_VORONOI_KL2_TRANSFER_OPEN.
+
+The next step is to determine whether the original factorable coefficients can be transferred to the smooth dual Kloosterman model with total loss at most the required
+\[
+P^{1/6-o(1)}
+\]
+saving budget, while preserving the \(P^{1/12}\times P^{1/4}\) dual factorization.
