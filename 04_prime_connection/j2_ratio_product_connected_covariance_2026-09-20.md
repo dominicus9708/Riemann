@@ -807,3 +807,315 @@ The next step is to determine whether the original factorable coefficients can b
 P^{1/6-o(1)}
 \]
 saving budget, while preserving the \(P^{1/12}\times P^{1/4}\) dual factorization.
+
+
+## 18. Direct additive five-variable monomial target
+
+Return to the exact additive-frequency representation
+\[
+\mathcal C_P
+=
+\frac1P
+\sum_{c\ne0}
+\widehat\eta(c)
+\sum_{b,e,r,s}
+\alpha_b\beta_e\rho_r\sigma_s
+e_P(cbers).
+\]
+
+The smooth shift weight of length
+\[
+H=P^{1/3}
+\]
+localizes the relevant additive frequencies to
+\[
+C=P/H=P^{2/3+o(1)}.
+\]
+
+Write
+\[
+\widehat\eta(c)=H\gamma_c,
+\qquad
+|\gamma_c|\ll_A
+\left(1+\frac{|c|}{C}\right)^{-A}.
+\]
+
+Then, up to arbitrary power-saving tails,
+\[
+\mathcal C_P
+=
+\frac HP\,\mathcal S_5,
+\]
+where
+\[
+\mathcal S_5
+=
+\sum_{c\asymp P^{2/3}}
+\sum_{b\asymp P^{2/3}}
+\sum_{e\asymp P^{1/2}}
+\sum_{r,s\asymp P^{1/4}}
+\gamma_c\alpha_b\beta_e\rho_r\sigma_s
+e_P(cbers)
+\]
+after dyadic frequency decomposition.
+
+The desired covariance bound
+\[
+\mathcal C_P\ll P^{2/3+o(1)}
+\]
+therefore follows from
+\[
+\boxed{
+\mathcal S_5\ll P^{4/3+o(1)}.
+}
+\]
+
+The raw number of terms is
+\[
+P^{2/3+2/3+1/2+1/4+1/4}
+=
+P^{7/3}.
+\]
+
+Thus a direct monomial route must recover a full
+\[
+\boxed{P^{-1}}
+\]
+saving relative to absolute values.
+
+Classification:
+J2_DIRECT_FIVE_VARIABLE_MONOMIAL_P1_SAVING_TARGET.
+
+## 19. Shparlinski unequal-box audit
+
+Shparlinski's 2014 monomial-sum paper proves Theorem 5 for equal cubes and explicitly notes that the method extends to unequal side lengths, although the parameter optimization becomes more involved.
+
+The ingredients needed here are already stated in full generality.
+
+For \(\nu\ge2\),
+\[
+I_{P,\nu}(L,k)
+\ll
+\left(
+L^\nu
++
+L^{2\nu}P^{-\nu/d_\nu}
+\right)P^{o(1)},
+\]
+with
+\[
+d_2=2,
+\qquad
+d_3=4.
+\]
+
+Lemma 3 gives for a \(\nu\)-variable unequal box
+\[
+J_{P,\nu}
+\le
+\prod_i
+I_{P,\nu}(L_i,k_i)^{1/\nu}.
+\]
+
+For
+\[
+L_i=P^{a_i},
+\]
+this yields the energy exponent
+\[
+g_\nu(a_i)
+=
+\max\left(
+a_i,
+2a_i-\frac1{d_\nu}
+\right).
+\]
+
+Following the same 2-vs-3 bilinear split as the proof of Theorem 5 gives
+\[
+|\mathcal S_5|
+\ll
+P^{1/2+
+\frac12 E_2+
+\frac12 E_3+o(1)},
+\]
+where
+\[
+E_2=\sum_{i\in I_2}g_2(a_i),
+\qquad
+E_3=\sum_{i\in I_3}g_3(a_i).
+\]
+
+For the present exponents
+\[
+\left\{
+\frac23,\frac23,\frac12,\frac14,\frac14
+\right\},
+\]
+checking all ten 2-vs-3 partitions gives the optimum
+\[
+E_2+E_3
+=
+\frac{35}{12}.
+\]
+
+For example,
+\[
+\{c,e\}\mid\{b,r,s\}
+\]
+gives
+\[
+E_2=\frac43,
+\qquad
+E_3=\frac{19}{12},
+\]
+while
+\[
+\{c,b\}\mid\{e,r,s\}
+\]
+gives
+\[
+E_2=\frac53,
+\qquad
+E_3=\frac54.
+\]
+
+In both cases
+\[
+\boxed{
+|\mathcal S_5|
+\ll
+P^{47/24+o(1)}.
+}
+\]
+
+The target is only
+\[
+P^{4/3+o(1)}
+=
+P^{32/24+o(1)}.
+\]
+
+Hence the generic monomial-energy method misses by
+\[
+\boxed{
+P^{15/24}
+=
+P^{5/8}.
+}
+\]
+
+After restoring the Fourier prefactor \(H/P=P^{-2/3}\), it yields only
+\[
+\mathcal C_P
+\ll
+P^{31/24+o(1)},
+\]
+far above the required \(P^{2/3+o(1)}\).
+
+Classification:
+J2_SHPRLINSKI_UNEQUAL_BOX_GENERIC_ROUTE_CLOSED.
+
+This does not rule out a theorem using the actual prime/Mobius coefficients; it closes only the generic bounded-weight monomial-energy route.
+
+## 20. Ideal centered-energy barrier
+
+The previous bound includes generic product-energy terms.
+
+Give the direct additive route the strongest reasonable generic advantage: suppose every product group used in a bilinear split has already been centered and has ideal random-scale multiplicative energy equal, up to \(P^{o(1)}\), to its tuple count.
+
+If the two groups contain tuple exponents
+\[
+\alpha_1+\alpha_2=\frac73,
+\]
+then the finite Fourier bilinear inequality still gives
+\[
+|\mathcal S_5|
+\ll
+P^{1/2}
+P^{\alpha_1/2}
+P^{\alpha_2/2}
+P^{o(1)}
+=
+\boxed{
+P^{5/3+o(1)}.
+}
+\]
+
+After the Fourier prefactor,
+\[
+\mathcal C_P
+\ll
+P^{-2/3}P^{5/3+o(1)}
+=
+\boxed{
+P^{1+o(1)}.
+}
+\]
+
+This is exactly the old generic Cauchy scale.
+
+The target is
+\[
+P^{2/3+o(1)}.
+\]
+
+Therefore even **perfect random-scale centered self-energy on both sides** leaves the same
+\[
+\boxed{P^{1/3}}
+\]
+deficit.
+
+Consequently, the missing saving cannot be obtained from:
+- better separate product-energy estimates alone;
+- centering alone;
+- a generic Fourier large-sieve step after product collapse.
+
+It must use a cross-correlation property of the actual five-factor arithmetic coefficients or a transform that retains more structure than the two self-energies.
+
+Permanent rule:
+J2_IDEAL_CENTERED_SELF_ENERGY_STILL_LEAVES_P13.
+
+## 21. Comparison of the two surviving exact formulations
+
+Two equivalent but analytically different targets now remain.
+
+### A. Direct additive monomial form
+\[
+\mathcal S_5
+\ll
+P^{4/3+o(1)}
+\]
+for the actual five factor coefficients.
+
+Advantage:
+no smoothing or coefficient transfer is required.
+
+Barrier:
+generic bounded-weight monomial and even ideal centered-energy methods are quantitatively insufficient.
+
+### B. Factorable Voronoi/Kloosterman form
+In the smooth comparison model the target is
+\[
+\sum_{h,m,n}
+\gamma_h\alpha_m\beta_n
+\mathrm{Kl}_2(\pm hmn;P)
+\ll
+P^{1/2+o(1)}
+\]
+at lengths
+\[
+P^{1/3},\quad P^{1/12},\quad P^{1/4}.
+\]
+
+Advantage:
+the short residue window is converted into the exact dual identity
+\[
+MN=H.
+\]
+
+Barrier:
+one must transfer the actual factorable Mobius/prime coefficients into this dual form without spending the required saving.
+
+Current priority:
+keep both formulations, but test coefficient-sensitive dispersion/Voronoi transfer before searching for a completely new generic monomial theorem.
