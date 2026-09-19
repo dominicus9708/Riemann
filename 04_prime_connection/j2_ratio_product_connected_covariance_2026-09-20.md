@@ -1119,3 +1119,234 @@ one must transfer the actual factorable Mobius/prime coefficients into this dual
 
 Current priority:
 keep both formulations, but test coefficient-sensitive dispersion/Voronoi transfer before searching for a completely new generic monomial theorem.
+
+
+## 22. Smooth dual Kloosterman model closes exactly by a known Type-II theorem
+
+The smooth comparison model from Sections 14--15 produced
+\[
+\mathcal T
+=
+\sum_{h\asymp P^{1/3}}
+\sum_{m\asymp P^{1/12}}
+\sum_{n\asymp P^{1/4}}
+\gamma_h\alpha_m\beta_n
+\mathrm{Kl}_2(\pm hmn;P)
+\]
+and required
+\[
+\mathcal T\ll P^{1/2+o(1)}.
+\]
+
+Collapse only the two **dual** variables
+\[
+k=mn.
+\]
+
+Define
+\[
+\delta_k
+=
+\sum_{mn=k}\alpha_m\beta_n.
+\]
+
+Since
+\[
+m\asymp P^{1/12},
+\qquad
+n\asymp P^{1/4},
+\]
+the coefficient is supported on
+\[
+k\asymp K=P^{1/3},
+\]
+up to finitely many dyadic pieces.
+
+For divisor-bounded dual weights,
+\[
+\boxed{
+\|\delta\|_2
+\ll
+K^{1/2}P^{o(1)}
+=
+P^{1/6+o(1)}.
+}
+\]
+
+Also
+\[
+\|\gamma\|_2
+\ll
+H^{1/2}P^{o(1)}
+=
+P^{1/6+o(1)},
+\qquad
+H=P^{1/3}.
+\]
+
+Blomer--Fouvry--Kowalski--Michel--Milicevic record the Type-II estimate
+\[
+\sum_{x,y}
+a_xb_y
+\mathrm{Kl}_2(xy;P)
+\ll_\varepsilon
+P^\varepsilon
+\|a\|_2\|b\|_2
+(XY)^{1/2}
+\left(
+\frac1X+\frac1Y
+\right)^{1/2}
+\]
+for prime modulus, in the constant-weight case. They identify this as a special case of Fouvry--Kowalski--Michel, Theorem 1.17.
+
+Apply it with
+\[
+X=H=P^{1/3},
+\qquad
+Y=K=P^{1/3}.
+\]
+
+Then
+\[
+\|\gamma\|_2\|\delta\|_2
+\ll
+P^{1/3+o(1)},
+\]
+\[
+(HK)^{1/2}
+=
+P^{1/3},
+\]
+and
+\[
+(H^{-1}+K^{-1})^{1/2}
+\asymp
+P^{-1/6}.
+\]
+
+Therefore
+\[
+\boxed{
+\mathcal T
+\ll
+P^{1/2+o(1)}.
+}
+\]
+
+This is exactly the target from Section 15.
+
+Hence:
+\[
+\boxed{
+\text{THE SMOOTH BINARY DUAL KLOOSTERMAN COMPARISON MODEL IS CLOSED.}
+}
+\]
+
+Classification:
+J2_SMOOTH_DUAL_KL2_TYPEII_CLOSED.
+
+## 23. What remains after this closure
+
+This does **not** close the actual j=2 sector.
+
+The missing step has now been isolated more sharply.
+
+The original grouped coefficients are
+\[
+u=br,
+\qquad
+v=es,
+\]
+with arithmetic weights inherited from:
+- the outer Mobius/divisor coefficient on \(b\);
+- the distinguished von-Mangoldt/prime weight on \(e\);
+- the two-small-prime boundary on \(r,s\).
+
+The two-dimensional Poisson step that generated the short dual variables
+\[
+P^{1/12},
+\qquad
+P^{1/4}
+\]
+was legal only for the smooth comparison weights.
+
+For arbitrary arithmetic weights on \(u,v\), completion gives full Fourier transforms rather than these short dual supports.
+
+Therefore the remaining problem is no longer the strength of the dual Kloosterman estimate.
+
+It is precisely:
+
+\[
+\boxed{
+\text{actual factorable coefficients}
+\longrightarrow
+\text{short dual Kloosterman coefficients}
+}
+\]
+
+with only \(P^{o(1)}\), or at worst a quantitatively affordable, loss.
+
+New canonical bottleneck:
+J2_FACTORABLE_TO_SHORT_DUAL_TRANSFER_OPEN.
+
+## 24. Exact sufficient transfer lemma
+
+A sufficient lemma would be the following.
+
+For the actual restricted coefficients \(A(u)\), \(D(v)\), produce a finite or Mellin-integrable decomposition
+\[
+A(u)D(v)
+=
+\sum_\omega
+c_\omega
+W_{1,\omega}(u/U)
+W_{2,\omega}(v/V)
++
+\mathcal R(u,v)
+\]
+such that:
+
+1. the total decomposition cost obeys
+\[
+\sum_\omega |c_\omega|
+\le
+P^{o(1)};
+\]
+
+2. every \(W_{i,\omega}\) has derivative loss \(P^{o(1)}\);
+
+3. the remainder already satisfies the centered target
+\[
+\mathcal R\text{-contribution}
+\ll
+P^{2/3+o(1)};
+\]
+
+4. the two-dimensional Poisson transform preserves the dual lengths
+\[
+P^{1/12},\qquad P^{1/4}
+\]
+up to \(P^{o(1)}\).
+
+Under these four conditions, Proposition 2.3 closes every transformed component and hence closes the current j=2 hard core.
+
+This is a sufficient condition only; a more direct dispersion identity may avoid such a decomposition.
+
+## 25. Priority correction
+
+The earlier rule
+DO_NOT_COLLAPSE_DUAL_P112_P14_BEFORE_KLOOSTERMAN_AUDIT
+has now served its purpose.
+
+After the exact theorem audit, collapsing
+\[
+P^{1/12}\times P^{1/4}
+\to
+P^{1/3}
+\]
+is quantitatively legal **inside the smooth dual model**, because the resulting coefficient has divisor-bounded \(L^2\) norm and Proposition 2.3 reaches the target exactly.
+
+It remains illegal to assume that the original arithmetic coefficients automatically possess this short-dual representation.
+
+Permanent distinction:
+DUAL_COLLAPSE_CLOSED; ORIGINAL_TO_DUAL_TRANSFER_OPEN.
