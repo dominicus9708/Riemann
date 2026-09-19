@@ -416,3 +416,74 @@ to at most
 oxed{H^{1/4}}
 ]
 on the genuinely bilinear central branch.
+
+
+## 11. Strengthening: the opposite H^3 variable need not be prime
+
+The preceding proof used the opposite large variable p~H^3 mainly through the product-side spacing
+\[
+|pm-p'm'|\lesssim H^{\theta-1}.
+\]
+
+For theta<1 this is diagonal at the **collapsed product level**.
+
+Therefore replace the prime coefficient on p by an arbitrary arithmetic coefficient \(\beta_y\) supported on
+\[
+y\asymp H^3
+\]
+satisfying the divisor-moment condition
+\[
+\sum_{y\asymp H^3}|\beta_y|^2
+\ll_\varepsilon
+H^{3+\varepsilon}.
+\]
+
+After the B-process, define the product coefficient
+\[
+c_z
+=
+\sum_{\substack{ym=z\\y\asymp H^3,\ m\asymp H^\theta}}
+\beta_y a_m.
+\]
+
+Divisor convolution gives
+\[
+\sum_z|c_z|^2
+\ll_\varepsilon
+H^{3+\theta+\varepsilon}.
+\]
+
+Since the V-side DLS resolution corresponds to an arithmetic product window
+\[
+H^{\theta-1}\le1,
+\]
+its spacing energy is
+\[
+\boxed{
+\mathcal B_V
+\ll_\varepsilon
+H^{3+\theta+\varepsilon}
+}
+\]
+without requiring y itself to be prime.
+
+The U-side estimate is unchanged, so the same calculation gives
+\[
+\boxed{
+T_\theta(\beta)
+\ll_\varepsilon
+H^{6+\varepsilon}.
+}
+\]
+
+Classification:
+\`LOW_TYPEI_CLOSES_AGAINST_ANY_DIVISOR_BOUNDED_H3_COEFFICIENT\`.
+
+## 12. Double-prime Vaughan consequence
+
+If Vaughan/Heath--Brown identities are applied to **both** prime variables, every branch pair in which at least one side contains a low-Type-I smooth cofactor of length at least H^2 is already closed at H^(6+epsilon), regardless of the detailed divisor-bounded branch coefficient on the opposite H^3 variable.
+
+Therefore the unresolved double-decomposition region may be restricted to branch pairs for which **both** H^3 prime variables lie in central/high arithmetic-factor blocks with no exposed smooth cofactor longer than H^2.
+
+Permanent rule:
+\`DOUBLE_PRIME_DECOMPOSITION_LOW_TYPEI_ON_EITHER_SIDE_CLOSES\`.
