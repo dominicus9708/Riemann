@@ -318,3 +318,72 @@ This is the smallest current j=2 analytic target.
 
 Permanent priority:
 \`J2_OUTER_MOBIUS_TO_BG_KERNEL_TRANSFER\`.
+
+
+## 9. Normalization correction — BG is near-match, not sufficient closure
+
+The comparison in Sections 3--4 between
+\[
+p^{-1/16}
+\]
+and the amplitude-side missing factor
+\[
+H^{-1/8}=p^{-1/24}
+\]
+is **not a legal proof comparison** for the determinant normal form used in Section 5.
+
+Reason: the congruence
+\[
+ap-bp'=h
+\]
+and the modular inverse-product kernel arise only after the squared/cell/dispersion reduction. They therefore live on the **variance side**, whereas H^(1/8) is an amplitude-side DLS deficit.
+
+If the amplitude bound is
+\[
+H^{6+1/8},
+\]
+then its squared/variance analogue carries residual
+\[
+\boxed{H^{1/4}.}
+\]
+
+Since
+\[
+p=H^3,
+\]
+this is
+\[
+H^{1/4}=p^{1/12}.
+\]
+
+Bourgain--Garaev supplies
+\[
+p^{-1/16}.
+\]
+
+Thus, in a perfectly lossless map of the refined variance residual to the BG kernel, the remaining factor would be
+\[
+p^{1/12-1/16}
+=
+\boxed{p^{1/48}=H^{1/16}},
+\]
+not a spare saving.
+
+Therefore the corrected classification is:
+
+\[
+\boxed{
+\text{BG critical inverse-product bound removes }3/4
+\text{ of the exponent-level refined variance deficit,
+but leaves }H^{1/16}.
+}
+\]
+
+The earlier labels J2_BG_INVERSE_PRODUCT_SUFFICIENT_IF_LEGAL_NORMAL_FORM and BG_NORMAL_FORM_OVERHEAD_BUDGET_H1_16 are superseded.
+
+Replace them by:
+- J2_BG_INVERSE_PRODUCT_LEAVES_H1_16_VARIANCE_RESIDUAL;
+- BG_NORMAL_FORM_MUST_BE_LOSSLESS_BEFORE_EXTRA_H1_16_GAIN.
+
+Permanent guard:
+DO_NOT_COMPARE_MODULAR_VARIANCE_SAVING_DIRECTLY_TO_AMPLITUDE_DEFICIT.
