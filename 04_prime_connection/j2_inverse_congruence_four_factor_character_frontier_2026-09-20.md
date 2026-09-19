@@ -386,3 +386,32 @@ The next analytic search should target this exact structured four-factor moment 
 
 Permanent priority:
 J2_STRUCTURED_FOUR_FACTOR_CHARACTER_MOMENT.
+
+
+## 11. Character-orientation correction
+
+The Cauchy grouping
+\[
+|B(\chi)H(\chi)|\cdot|E(\chi)K(\chi)|
+\]
+is useful only for estimating absolute values.
+
+It must not be reinterpreted as the different character sum
+\[
+\sum_\chi B(\chi)H(\chi)\overline{E(\chi)K(\chi)}.
+\]
+
+The exact moment is
+\[
+\sum_\chi B(\chi)E(\chi)K(\chi)\overline{H(\chi)},
+\]
+and orthogonality therefore encodes
+\[
+\boxed{b e k\equiv -h\pmod P},
+\]
+not \(bh\equiv ek\).
+
+Thus the generic Cauchy estimate \(P^{1+o(1)}\) and the required target \(P^{2/3+o(1)}\) remain valid, but no cross-diagonal absence may be inferred from the \(BH|EK\) norm grouping.
+
+Permanent rule:
+CAUCHY_PAIRING_IS_NOT_A_NEW_CHARACTER_IDENTITY.
