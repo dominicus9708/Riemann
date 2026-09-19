@@ -370,6 +370,27 @@
 - Limitation: arithmetic-progression geometry and theorem hypotheses differ from the present reciprocal monomial phase; no black-box transfer is claimed.
 - Audit verdict: `ACCEPT_FOR_WELL_FACTORABLE_DISPERSION_ARCHITECTURE_NOT_DIRECT_CLOSURE`
 
+
+## S037 — Olivier Robert & Patrick Sargos (2006), Three-dimensional exponential sums with monomials
+
+- Type: \`PRIMARY_RESEARCH\`
+- Journal: Journal für die reine und angewandte Mathematik 591 (2006), 1–20
+- DOI: 10.1515/CRELLE.2006.012
+- Role: generic real three-dimensional monomial exponential-sum benchmark with arbitrary bounded coefficients.
+- Main audit use: the theorem's functional class includes the reciprocal exponent pattern relevant to the j=2 sharp block after relabeling.
+- Sharp-scale comparison used here:
+  \[
+  H_1=H^2,\quad M=N=H^3,\quad X=H^4.
+  \]
+  In the best direct permutation, the generic bound is of scale
+  \[
+  H^{27/4+\varepsilon}=H^{6+3/4+\varepsilon},
+  \]
+  while the j=2 target is \(H^{6+\varepsilon}\).
+- Critical interpretation: the smooth phase itself has an H^6 three-dimensional stationary-phase benchmark; the H^(3/4) gap measures loss in a theorem robust to generic arithmetic coefficients, not insufficient phase curvature.
+- Audit verdict: \`ACCEPT_FOR_GENERIC_3D_ARITHMETIC_COEFFICIENT_BENCHMARK_NOT_CLOSURE\`
+- URL: https://doi.org/10.1515/CRELLE.2006.012
+
 ## Source-use rule
 
 어떤 자료도 `권위 있는 출처`라는 이유만으로 모든 종류의 주장에 사용하지 않는다. 범위, 정리, 계산기록, 최신성, 데이터 완전성은 서로 다른 검증축으로 관리한다.
