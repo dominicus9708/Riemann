@@ -751,19 +751,25 @@ h\asymp P^{1/3},
 k\asymp P^{1/3}.
 \]
 
-The Kowalski--Michel--Sawin 2018 generalized-Kloosterman benchmark is nontrivial for two equal lengths from
+Kowalski--Michel--Sawin have more than one bilinear regime. Later expositions record a stronger special result that becomes nontrivial for equal lengths
 \[
-P^{3/8+\delta}
+P^{1/3+\delta}
 \]
-onward.
+for every fixed \(\delta>0\), while another general regime has the \(P^{3/8+\delta}\) threshold.
 
-Thus the symmetric
+Hence the present symmetric box
 \[
 P^{1/3}\times P^{1/3}
 \]
-box lies below that general threshold.
+sits exactly at the critical endpoint of the stronger result, not strictly inside its proven power-saving range.
 
-Recent 2026 Blomer--Pascadi bounds improve the critical square-root-length saving, but their abstract-level critical regime is not the present \(P^{1/3}\times P^{1/3}\) box.
+Our comparison target is stronger than mere nontriviality: it requires the definite factor
+\[
+P^{-1/6+o(1)}.
+\]
+No such endpoint saving follows by direct substitution into the quoted general bilinear bounds.
+
+Recent 2026 Blomer--Pascadi bounds improve the saving in the critical square-root-length regime, but their published abstract does not supply a direct parameter map for the present \(P^{1/3}\times P^{1/3}\) endpoint.
 
 Therefore no black-box closure is recorded from these theorems.
 
