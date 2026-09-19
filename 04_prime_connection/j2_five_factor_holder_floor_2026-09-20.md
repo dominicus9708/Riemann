@@ -215,3 +215,138 @@ Any next theorem must correlate at least two of the factor groups before absolut
 
 Priority:
 J2_FIVE_FACTOR_CROSS_CORRELATION_ESTIMATE.
+
+
+## 8. Audit correction — Bettin--Chandee determinant map was tied to the invalid wrap-shell
+
+Sections 5--6 above used the determinant model
+\[
+h b-e k=\Delta.
+\]
+
+That equation came from the now-withdrawn character reorientation
+\[
+BH\mid EK.
+\]
+
+It is therefore **not an exact reformulation of the j=2 hard core**.
+
+The exact arithmetic condition remains
+\[
+\boxed{
+b e k\equiv -h\pmod P,
+}
+\]
+and with \(k=rs\),
+\[
+\boxed{
+b e r s\equiv -h\pmod P.
+}
+\]
+
+Hence the Bettin--Chandee calculation in Sections 5--6 is retained only as a comparison showing that the artificial balanced determinant box would not have closed quantitatively anyway.
+
+It must not be used as a legal route from the current j=2 frontier.
+
+Withdrawn as proof route:
+BC_TWO_ARBITRARY_DETERMINANT_QUANTITATIVELY_CLOSED_AS_ROUTE.
+
+Reclassified as:
+BC_ARTIFICIAL_CAUCHY_DETERMINANT_COMPARISON_ONLY.
+
+Permanent guard:
+EXACT_DETERMINANT_MAP_MUST_BE_DERIVED_BEFORE_APPLYING_BC_DFI.
+
+## 9. Correct quotient equation
+
+Introduce the integer quotient \(\ell\) by
+\[
+b e r s+h=\ell P.
+\]
+
+Since
+\[
+b\asymp P^{2/3},
+\qquad
+ers\asymp P,
+\]
+we have
+\[
+\boxed{
+\ell\asymp P^{2/3}.
+}
+\]
+
+Let
+\[
+n:=ers\asymp P.
+\]
+
+Then the exact congruence is equivalent to
+\[
+\boxed{
+b n-\ell P=-h.
+}
+\]
+
+This is the correct two-by-two determinant-like relation:
+\[
+\det
+\begin{pmatrix}
+b & \ell\\
+P & n
+\end{pmatrix}
+=
+bn-\ell P
+=
+-h,
+\]
+with \(P\) fixed prime and \(n\) carrying the structured triple-prime coefficient.
+
+No character orientation is changed in deriving this equation.
+
+## 10. Exact Farey-critical geometry
+
+Divide the quotient equation by \(bP\):
+\[
+\frac{n}{P}-\frac{\ell}{b}
+=
+-\frac{h}{bP}.
+\]
+
+At the hard scales
+\[
+b,\ell\asymp P^{2/3},
+\qquad
+|h|\lesssim P^{1/3},
+\]
+so
+\[
+\boxed{
+\left|
+\frac{n}{P}-\frac{\ell}{b}
+\right|
+\lesssim
+P^{-4/3}.
+}
+\]
+
+But
+\[
+b^{-2}\asymp P^{-4/3}.
+\]
+
+Therefore the quotient formulation is exactly Farey-critical:
+\[
+\boxed{
+\left|
+\frac{n}{P}-\frac{\ell}{b}
+\right|
+\lesssim b^{-2}.
+}
+\]
+
+As in the earlier determinant audit, this supplies no free spacing gain by itself.
+
+Permanent rule:
+J2_VALID_QUOTIENT_FAREY_SCALE_IS_CRITICAL.
