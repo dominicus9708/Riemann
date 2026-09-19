@@ -413,6 +413,72 @@
   - nontrivial power saving is not automatically quantitatively sufficient.
 - Audit verdict: \`ACCEPT_FOR_HYPERKLOOSTERMAN_FUNCTIONAL_CLASS_AND_POWER_SAVING_BENCHMARK_NOT_CLOSURE\`
 
+
+## S039 — Jean Bourgain & Moubariz Z. Garaev, Sumsets of reciprocals in prime fields and multilinear Kloosterman sums
+
+- Type: PRIMARY_RESEARCH
+- arXiv:1211.4184.
+- Role: incomplete bilinear/multilinear reciprocal-product exponential sums over intervals modulo a prime.
+- Project-critical inputs:
+  - Theorem 7 allows arbitrary bounded weights in the incomplete bilinear reciprocal setting and gives a power saving in ranges including the square-root/square-root scale.
+  - Theorem 9 gives an explicit interval bound; at \(N_1=N_2=p^{1/2}\) it has scale \(p^{15/16+o(1)}\), a \(p^{-1/16}\) saving over the trivial \(p\).
+  - Theorems 11--13 give multilinear incomplete Kloosterman savings under entropy/product-length hypotheses.
+- Critical guard: these modular estimates live on the determinant/variance side; their saving must not be compared directly with an amplitude-side DLS deficit.
+- Audit verdict: ACCEPT_FOR_RECIPROCAL_PRODUCT_BOUNDS_WITH_NORMALIZATION_GUARD
+- URL: https://arxiv.org/abs/1211.4184
+
+## S040 — M. A. Korolev, On Kloosterman sums with multiplicative coefficients
+
+- Type: PRIMARY_RESEARCH
+- arXiv:1610.09171.
+- Role: Möbius-weighted incomplete reciprocal Kloosterman sums.
+- Relevant structural result: for prime modulus \(q\) and interval length \(x\ge q^{1/2+\varepsilon}\), sums of the schematic form
+  \[
+  \sum_{n\le x}\mu(n)e_q(a\bar n+bn)
+  \]
+  admit a power saving depending on \(\varepsilon\).
+- Project map: the outer \(j=2\) Möbius length \(p^{2/3}\) lies above the square-root threshold.
+- Limitation: the available exponent is not verified large enough to close the present coupled three-factor residual as a black box.
+- Audit verdict: ACCEPT_FOR_MOBIUS_RECIPROCAL_POWER_SAVING_EXISTENCE_NOT_CLOSURE
+- URL: https://arxiv.org/abs/1610.09171
+
+## S041 — William D. Banks & Igor E. Shparlinski (2020), Congruences with intervals and arbitrary sets
+
+- Type: PRIMARY_RESEARCH
+- Journal: Archiv der Mathematik 114 (2020).
+- DOI: 10.1007/s00013-019-01421-7
+- Role: multiplicative incidence energy
+  \[
+  J(H,\mathcal M)=\#\{xm\equiv yn\pmod p\}
+  \]
+  with \(x,y\) in an interval and \(m,n\) in an arbitrary set.
+- Project benchmark at \(B=p^{2/3}\), \(M=p^{1/2}\):
+  \[
+  J(B,\mathcal M)
+  \ll
+  B^2M^2/p+BM\,p^{o(1)}
+  \asymp p^{4/3+o(1)}.
+  \]
+- Audit consequence: a one-sided Cauchy over the remaining \(p^{1/2}\) variable gives \(p^{11/12+o(1)}\), so this incidence theorem alone does not close the outer-transfer problem.
+- Audit verdict: ACCEPT_FOR_OUTER_INTERVAL_ARBITRARY_SET_ENERGY_NOT_DIRECT_CLOSURE
+- URL: https://arxiv.org/abs/1907.03943
+
+## S042 — Giorgis Petridis & Igor E. Shparlinski (2019), Bounds on trilinear and quadrilinear exponential sums
+
+- Type: PRIMARY_RESEARCH
+- Journal: Journal d'Analyse Mathématique.
+- DOI: 10.1007/S11854-019-0028-4
+- arXiv:1604.08469.
+- Role: explicit weighted trilinear exponential-sum bounds over arbitrary subsets of a prime field.
+- In the range \(XY\gg p\), the comparison form used here is
+  \[
+  O\!\left(p^{1/4}X^{3/4}Y^{3/4}Z^{7/8}\right).
+  \]
+- At \(X=p^{2/3}\), \(Y=Z=p^{1/2}\), this is \(p^{25/16}\).
+- Relevance: applies to the three-variable inverse-product functional class after inversion of the determinant congruence; however pointwise control in the additive frequency does not by itself control the full centered frequency aggregate.
+- Audit verdict: ACCEPT_FOR_WEIGHTED_TRILINEAR_FINITE_FIELD_BENCHMARK_NOT_CENTERED_CLOSURE
+- URL: https://arxiv.org/abs/1604.08469
+
 ## Source-use rule
 
 어떤 자료도 `권위 있는 출처`라는 이유만으로 모든 종류의 주장에 사용하지 않는다. 범위, 정리, 계산기록, 최신성, 데이터 완전성은 서로 다른 검증축으로 관리한다.
